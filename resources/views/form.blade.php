@@ -1,7 +1,7 @@
 <form action="/postForm" method="POST">
     @csrf
     <label for="name">Name</label><br>
-    <input type="text" name="name" id="name"><br>
+    <input type="text" name="name" id="name" placeholder="First name"><br>
     @error('name')
         <p>{{$message}}</p>
     @enderror
