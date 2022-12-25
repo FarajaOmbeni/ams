@@ -1,3 +1,6 @@
+<!--DISPLAY DATABASE DATA IN A TABLE-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
