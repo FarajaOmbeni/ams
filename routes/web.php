@@ -20,7 +20,14 @@ Route::get('/', function () {
 });
 
 Route::get('/post',[FormController::class, 'index']);
+//posting data to the database
 Route::post('/postForm',[FormController::class, 'post']);
+//Updating data in teh database
+Route::get('/post/{id}/update', [FormController::class, 'updateForm']);
+Route::post('/post/{id}/edit', [FormController::class, 'editForm']);
+//Passing id in routes
+Route::get('/allposts', [FormController::class, 'allposts']);
+
 Route::get('/admin', [AdminController::class,'index'])->middleware('auth');
 Route::get('/admin/accept', [AdminController::class,'accept']);
 Route::get('/admin/enrol', [AdminController::class,'enrol']);
