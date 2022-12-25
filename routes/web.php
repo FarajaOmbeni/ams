@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Route::get('/post',[FormController::class, 'index']);
 //posting data to the database
 Route::post('/postForm',[FormController::class, 'store_form']);
@@ -28,12 +32,16 @@ Route::post('/post/{id}/edit', [FormController::class, 'editForm']);
 //Displaying all the data in a view
 Route::get('/allposts', [FormController::class, 'allposts']);
 
-Route::get('/admin', [AdminController::class,'index'])->middleware('auth');
-Route::get('/admin/accept', [AdminController::class,'accept']);
-Route::get('/admin/enrol', [AdminController::class,'enrol']);
-Route::get('/admin/registration_requests', [AdminController::class,'registration_requests']);
-Route::get('/admin/assign_lecturers', [AdminController::class,'assign_lecturers']);
-Route::get('/admin/timetable', [AdminController::class,'timetable']);
+//admin
+Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
+    Route::get('/', [AdminController::class,'index']);
+    Route::get('accept', [AdminController::class,'accept']);
+    Route::get('enrol', [AdminController::class,'enrol']);
+    Route::get('registration_requests', [AdminController::class,'registration_requests']);
+    Route::get('assign_lecturers', [AdminController::class,'assign_lecturers']);
+    Route::get('timetable', [AdminController::class,'timetable']);
+});
+
 
 Auth::routes();
 
