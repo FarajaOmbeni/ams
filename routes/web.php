@@ -22,10 +22,10 @@ Route::get('/', function () {
 Route::get('/post',[FormController::class, 'index']);
 //posting data to the database
 Route::post('/postForm',[FormController::class, 'store_form']);
-//Updating data in teh database
+//Updating data in the database
 Route::get('/post/{id}/update', [FormController::class, 'updateForm']);
 Route::post('/post/{id}/edit', [FormController::class, 'editForm']);
-//Passing id in routes
+//Displaying all the data in a view
 Route::get('/allposts', [FormController::class, 'allposts']);
 
 Route::get('/admin', [AdminController::class,'index'])->middleware('auth');
