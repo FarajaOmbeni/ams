@@ -30,7 +30,20 @@
      <h2>Home</h2>
       <div class="promo_card"> 
        <h1>COURSE UNITS!</h1>
-      
+       <table>
+       <tr>
+        <th>course name</th>
+        <th>course code</th>
+        <th>unit code</th>
+       </tr>
+       @foreach($units as $unit)
+        <tr>
+            <td>{{$unit->name}}</td>
+            <td>{{$unit->course_code}}</td>
+            <td>{{$unit->unit_code}}</td>
+        </tr>
+        @endforeach
+</table>
       </div>
     </div>
   </div>
@@ -53,6 +66,16 @@
 }
 body{
   background: #c0d4c2;
+}
+
+table{
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid;
+}
+table:nth-child(even){
+    background-color: #f2f2f2;
 }
 .header{
   display: flex;
