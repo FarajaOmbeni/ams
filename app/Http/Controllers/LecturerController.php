@@ -16,5 +16,20 @@ class LecturerController extends Controller
 
     }
 
+    public function enrolled(){
+        return view('lecturer/enrolled');
+
+    }
+
+    public function marks(){
+        return view('lecturer/marks');
+
+    }
+
+    public function attendance(){
+        return view('lecturer/attendance');
+
+    }
+
 
 }
