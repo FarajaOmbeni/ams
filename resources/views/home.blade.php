@@ -21,6 +21,8 @@
                     {{$username}} <br>
 
                     {{ __('You are logged in!') }}
+
+                    <a href="admin">Admin Dashboard</a>
                 </div>
             </div>
         </div>

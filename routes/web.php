@@ -42,7 +42,21 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
     Route::get('timetable', [AdminController::class,'timetable']);
 });
 
+Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
+    //Input Lecturer routes in here
+});
+
+Route::prefix('student')->middleware('auth')->group(function(){
+    //Input Lecturer routes routes in here
+});
+
+Route::prefix('staff')->middleware('auth','isStaff')->group(function(){
+    //Input staff routes in here
+});
+
+
+
+
 
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
