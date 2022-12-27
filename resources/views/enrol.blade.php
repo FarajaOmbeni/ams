@@ -53,8 +53,8 @@
                 <th>Enrol</th>
                 <th>Edit</th>
             </tr>  
+            @foreach($students as $student)
             <tr>
-                @foreach($students as $student)
                 <td>{{$student->id}}</td>
                 <td>{{$student->fname}}</td>
                 <td>{{$student->lname}}</td>
@@ -72,11 +72,11 @@
                 <td>{{$student->sponsor_tel}}</td>
                 <form action="enrolStudent/{{$student->id}}" method="post">
                   @csrf
-                  <td><input type="text" name="enrol" value="{{$student->enrolled}}"></td>
+                  <td><input type="hidden" name="enrol" value="1">No</td>
                 <td><input type="submit" value="Enrol" id="button"></td>
                   </form>
-                @endforeach
             </tr>  
+            @endforeach
         </table> 
     </div>
       

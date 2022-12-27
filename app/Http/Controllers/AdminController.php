@@ -18,7 +18,7 @@ class AdminController extends Controller
     }
 
     public function enrol(){
-        $students = Application::where('id','1')->where('enrolled','0')->orderby('email','asc')->get();
+        $students = Application::where('enrolled','0')->orderby('email','asc')->get();
 
         return view('enrol',['students'=>$students]);}
 

@@ -13,23 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('applications', function (Blueprint $table) {
+        Schema::create('staff', function (Blueprint $table) {
             $table->id();
             $table->string('fname');
             $table->string('lname');
-            $table->string('email');
-            $table->Integer('phone_number');
-            $table->string('identification_number');
+            $table->string('email')->unique();
+            $table->string('tel')->unique();
+            $table->string('identification_number')->unique();
+            $table->string('nationality');
             $table->string('county');
             $table->string('address');
-            $table->string('course');
-            $table->string('parent_name');
-            $table->string('parent_email');
-            $table->Integer('parent_tel');
-            $table->string('sponsor_name');
-            $table->string('sponsor_email');
-            $table->Integer('sponsor_tel');
-            $table->string('enrolled')->default('0');
+            $table->string('dep_id')->references('id')->on('departments');
             $table->timestamps();
         });
     }
@@ -41,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('applications');
+        Schema::dropIfExists('staff');
     }
 };
