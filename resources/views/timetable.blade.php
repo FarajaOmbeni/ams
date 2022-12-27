@@ -23,13 +23,12 @@
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a href="/admin">Home</a>
+        <a href="../home">Home</a>
         <a href="admin/accept">Acceptance Letter</a>
         <a href="enrol">Enrol Students</a>
         <a href="registration_requests">Send Registration Requests</a>
         <a href="assign_lecturers">Assign Lecturers</a>
-        <a class="active" href="timetable">Timetable</a>
-        <a class="log-out-button" href="/">Log out</a>
+        <a class="active" href="#">Timetable</a>
       </div>
     </nav>
 

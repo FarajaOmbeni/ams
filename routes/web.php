@@ -40,6 +40,8 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
     Route::get('registration_requests', [AdminController::class,'registration_requests']);
     Route::get('assign_lecturers', [AdminController::class,'assign_lecturers']);
     Route::get('timetable', [AdminController::class,'timetable']);
+    Route::post('sendLetter', [AdminController::class, 'acceptLetter']);
+    Route::post('enrolStudent/{id}', [AdminController::class, 'enrolStudent']);
 });
 
 Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){

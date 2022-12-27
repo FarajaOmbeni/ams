@@ -23,13 +23,12 @@
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a href="/admin">Home</a>
+        <a href="../home">Home</a>
         <a href="accept">Acceptance Letter</a>
-        <a class="active" href="admin/enrol">Enrol Students</a>
+        <a class="active" href="#">Enrol Students</a>
         <a href="registration_requests">Send Registration Requests</a>
         <a href="assign_lecturers">Assign Lecturers</a>
         <a href="timetable">Timetable</a>
-        <a class="log-out-button" href="/">Log out</a>
       </div>
     </nav>
 
@@ -46,26 +45,37 @@
                 <th>Address</th>
                 <th>Course</th>
                 <th>Parent Name</th>
+                <th>Parent Email</th>
                 <th>Parent Tel</th>
                 <th>Sponsor Name</th>
+                <th>Sponsor Email</th>
                 <th>Sponsor Tel</th>
                 <th>Enrol</th>
+                <th>Edit</th>
             </tr>  
             <tr>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td><input type="submit" name="enrol" value="Enrol" id="button"></td>
+                @foreach($students as $student)
+                <td>{{$student->id}}</td>
+                <td>{{$student->fname}}</td>
+                <td>{{$student->lname}}</td>
+                <td>{{$student->email}}</td>
+                <td>{{$student->phone_number}}</td>
+                <td>{{$student->identification_number}}</td>
+                <td>{{$student->county}}</td>
+                <td>{{$student->address}}</td>
+                <td>{{$student->course}}</td>
+                <td>{{$student->parent_name}}</td>
+                <td>{{$student->parent_email}}</td>
+                <td>{{$student->parent_tel}}</td>
+                <td>{{$student->sponsor_name}}</td>
+                <td>{{$student->sponsor_email}}</td>
+                <td>{{$student->sponsor_tel}}</td>
+                <form action="enrolStudent/{{$student->id}}" method="post">
+                  @csrf
+                  <td><input type="text" name="enrol" value="{{$student->enrolled}}"></td>
+                <td><input type="submit" value="Enrol" id="button"></td>
+                  </form>
+                @endforeach
             </tr>  
         </table> 
     </div>
@@ -77,6 +87,21 @@
 </html>
 
 <style>
+
+  /*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: #fcf0d4;
+}
 
 table{
     border-collapse: collapse;
@@ -98,20 +123,6 @@ table:nth-child(even){
     background-color: #798f97;
 }
 
-  /*  import google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-*{
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body{
-  background: #fcf0d4;
-}
 .header{
   display: flex;
   align-items: center;

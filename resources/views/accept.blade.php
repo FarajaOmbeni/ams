@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,25 +22,35 @@
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a href="/admin">Home</a>
-        <a class="active" href="admin/accept">Acceptance Letter</a>
+        <a href="../home">Home</a>
+        <a class="active" href="#">Acceptance Letter</a>
         <a href="enrol">Enrol Students</a>
         <a href="registration_requests">Send Registration Requests</a>
         <a href="assign_lecturers">Assign Lecturers</a>
         <a href="timetable">Timetable</a>
-        <a class="log-out-button" href="/">Log out</a>
       </div>
     </nav>
 
     <div class="main-body">
       <div class="formBox">
         <h2>Acceptance Letter</h2><br><br>
-        <form action="">
-            <label for="email"> Student Email</label><br>
-            <input type="text" name="email" id="input-text"> <br><br><br>
+        <form action="sendLetter" method="post">
+          @csrf
+            <select name="email" id="input-text">
+              @foreach($students as $student)
+              <option value="{{$student->email}}" name="email">{{$student->email}}</option>
+              @endforeach
+            </select>
+             <br><br><br>
             <label for="letter">Letter</label><br>
             <textarea name="letter" id="input-textarea" cols="30" rows="10"></textarea><br>
+            @error('letter')
+            <ul>
+              <li style="color:red">{{$message}}</li>
+            </ul>
+    @enderror
             <input type="submit" name="" id="button" value="SEND">
+
         </form>
       </div>
       
@@ -52,6 +61,19 @@
 </html>
 
 <style>
+
+  /*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 .formBox{
     background-color: white;
     width: 60%;
@@ -75,7 +97,7 @@ label{
 
 #input-text{
     width: 60%;
-    height: 35px;
+    height: 60px;
     padding:10px 0;
     margin:5px 0;
     border: 1px solid rgb(20, 9, 9);
@@ -92,17 +114,6 @@ label{
     background: transparent;
 }
 
-  /*  import google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-*{
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 body{
   background: #fcf0d4;
 }

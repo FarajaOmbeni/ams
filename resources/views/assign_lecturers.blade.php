@@ -23,13 +23,12 @@
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a href="/admin">Home</a>
+        <a href="../home">Home</a>
         <a href="accept">Acceptance Letter</a>
         <a href="enrol">Enrol Students</a>
         <a href="registration_requests">Send Registration Requests</a>
-        <a class="active" href="admin/assign_lecturers">Assign Lecturers</a>
+        <a class="active" href="#">Assign Lecturers</a>
         <a href="timetable">Timetable</a>
-        <a class="log-out-button" href="/">Log out</a>
       </div>
     </nav>
 
@@ -66,6 +65,22 @@
 
 <style>
 
+  /*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: #fcf0d4;
+}
+
 .formBox{
     background-color: white;
     width: 60%;
@@ -101,20 +116,6 @@ label{
     background: transparent;
 }
 
-  /*  import google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-*{
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body{
-  background: #fcf0d4;
-}
 .header{
   display: flex;
   align-items: center;
