@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LecturerController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -45,8 +47,11 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
 });
 
 Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
-    //Input Lecturer routes in here
+    
 });
+
+Route::get('/lecturer', [LecturerController::class,'index']);
+Route::get('/lecturer/units', [LecturerController::class,'units']);
 
 Route::prefix('student')->middleware('auth')->group(function(){
     //Input Lecturer routes routes in here
