@@ -52,6 +52,9 @@ Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
 
 Route::get('/lecturer', [LecturerController::class,'index']);
 Route::get('/lecturer/units', [LecturerController::class,'units']);
+Route::get('/lecturer/enrolled', [LecturerController::class,'enrolled']);
+Route::get('/lecturer/marks', [LecturerController::class,'marks']);
+Route::get('/lecturer/attendance', [LecturerController::class,'attendance']);
 
 Route::prefix('student')->middleware('auth')->group(function(){
     //Input Lecturer routes routes in here
