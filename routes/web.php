@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LecturerController;
-
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +21,8 @@ use App\Http\Controllers\LecturerController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 
 
 
@@ -57,7 +59,17 @@ Route::get('/lecturer/marks', [LecturerController::class,'marks']);
 Route::get('/lecturer/attendance', [LecturerController::class,'attendance']);
 
 Route::prefix('student')->middleware('auth')->group(function(){
-    //Input Lecturer routes routes in here
+
+        Route::get('/', [StudentController::class, 'student']);
+        Route::get('mydetails', [StudentController::class, 'mydetails']);
+        Route::get('selfregistration', [StudentController::class, 'selfregistration']);
+        Route::get('courseworkmarks', [StudentController::class, 'courseworkmarks']);
+        Route::get('attendance', [StudentController::class, 'attendance']);
+        Route::get('progressreport', [StudentController::class, 'progressreport']);
+        Route::get('examcard', [StudentController::class, 'examcard']);
+        Route::get('feestructure', [StudentController::class, 'feestructure']);
+        Route::get('feestatement', [StudentController::class, 'feestatement']);
+        Route::get('graduation', [StudentController::class, 'graduation']);
 });
 
 Route::prefix('staff')->middleware('auth','isStaff')->group(function(){
