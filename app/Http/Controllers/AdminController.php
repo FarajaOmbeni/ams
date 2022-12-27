@@ -10,23 +10,23 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
-    public function index(){return view('admin');}
+    public function index(){return view('admin/admin');}
 
     public function accept(){
         $students = User::where('role','0')->orderBy('email','asc')->get();
-        return view('accept', ['students'=>$students]);
+        return view('admin/accept', ['students'=>$students]);
     }
 
     public function enrol(){
         $students = Application::where('enrolled','0')->orderby('email','asc')->get();
 
-        return view('enrol',['students'=>$students]);}
+        return view('admin/enrol',['students'=>$students]);}
 
-    public function registration_requests(){return view('registration_requests');}
+    public function registration_requests(){return view('admin/registration_requests');}
 
-    public function assign_lecturers(){return view('assign_lecturers');}
+    public function assign_lecturers(){return view('admin/assign_lecturers');}
 
-    public function timetable(){return view('timetable');}
+    public function timetable(){return view('admin/timetable');}
 
     public function acceptLetter(){
         Validator::make(request()->all(),[
