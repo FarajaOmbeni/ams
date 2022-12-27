@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Unit;
 
 class LecturerController extends Controller
 {
@@ -12,7 +13,9 @@ class LecturerController extends Controller
     }
 
     public function units(){
-        return view('lecturer/units');
+        // $units = Unit::where('unit_code','ICS2205')->get();
+        $units = Unit::all();
+        return view('lecturer/units',['units'=>$units]);
 
     }
 
