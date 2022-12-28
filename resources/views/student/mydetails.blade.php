@@ -52,54 +52,56 @@
         <div class="detailsform">
           <h4>Personal details</h4><br>
           <form>
-            <div>
+            <div class="pd-parent">
+
             <div class="pd1">
               <label for="ID">ID/Passport Number:</label>
-              <input type="text" name="id" Placeholder="id" style="margin-left: 40px"><br><br>
+              <input type="text" name="id" Placeholder="id" style="margin-left:27px;"><br><br>
 
               <label for="postal-address">Postal Address:</label>
-              <input type="text" name="postal-address" placeholder="Postal-address"><br><br>
+              <input type="text" name="postal-address" placeholder="Postal-address" style="margin-left: 70px"><br><br>
 
               <label for="town">Town:</label>
-              <input type="text" name="town" placeholder="Town"><br><br>
+              <input type="text" name="town" placeholder="Town" style="margin-left: 145px"><br><br>
 
-              <label for="home-country">Home County: <span style="font-size:15px" class="hc">(Foreigner' for non-Kenyan citizen)<span></label>
-              <select name="home-county" id="home-county">
+              <label for="home-country">Home County:</label>
+              <select name="home-county" id="home-county" style="margin-left: 77px">
                 <option value="embu">Embu</option>
                 <option value="foreigner">Foreigner</option>
                 <option value="busia">Busia</option>
               </select><br><br>
               
               <label for="residence">Residence:</label>
-              <input type="text" name="residence" placeholder="residence">
+              <input type="text" name="residence" placeholder="residence" style="margin-left: 105px">
             </div>
 
             <div class="pd2">
               <label for="religion">Religion</label>
-              <select name="religion" id="religion">
+              <select name="religion" id="religion" style="margin-left: 120px">
                 <option value="christian">Christian</option>
                 <option value="muslim">Muslim</option>
                 <option value="hindu">Hindu</option>
               </select><br><br>
 
               <label for="postal-code">Postal Code:</label>
-              <input type="text" name="postal-code" placeholder="Postal-code"><br><br>
+              <input type="text" name="postal-code" placeholder="Postal-code" style="margin-left: 83px"><br><br>
 
               <label for="marital-status">Marital Status:</label>
-              <select name="marital-status" id="marital-status">
+              <select name="marital-status" id="marital-status" style="margin-left: 70px">
                 <option value="single">Single</option>
                 <option value="married">Married</option>
                 <option value="divorced">Divorced</option>
               </select><br><br>
 
               <label for="mobile-number">Mobile Number:</label>
-              <input type="text" name="mobile-number" placeholder="Mobile Number"><br><br>
+              <input type="text" name="mobile-number" placeholder="Mobile Number" style="margin-left: 58px"><br><br>
 
               <label for="personal-email">Personal Email:</label>
-              <input type="email" name="personal-email" placeholder="Email"><br><br>
+              <input type="email" name="personal-email" placeholder="Email" style="margin-left: 62px">
 
 
             </div>
+
             </div>
 
           
@@ -247,9 +249,15 @@ nav{
 .detailsform h4{
   text-align: center;
 }
+.pd-parent{
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+}
+
 .pd1,.pd2{
   display: inline-block;
-  width: 560px;
+  width: 515px;
   padding: 0.5rem;
   
 }
@@ -258,8 +266,9 @@ nav{
 }
 .pd1{
   background: #767676;
-  padding: 0.5rem;
-
+}
+label{
+  text-align: right;
 }
 
 </style>
