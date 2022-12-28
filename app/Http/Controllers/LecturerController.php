@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class LecturerController extends Controller
 {
     public function index(){
-        return view('lecturer/lecturer');
+        return view('lecturer/lecturerHome');
 
     }
 

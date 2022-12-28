@@ -36,9 +36,12 @@ Route::post('/post/{id}/edit', [FormController::class, 'editForm']);
 //Displaying all the data in a view
 Route::get('/allposts', [FormController::class, 'allposts']);
 
-//admin
+
+
+//----------------ADMIN------------------------------//
 Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
     Route::get('/', [AdminController::class,'index']);
+    Route::get('dashboard', [AdminController::class,'dashboard']);
     Route::get('accept', [AdminController::class,'accept']);
     Route::get('enrol', [AdminController::class,'enrol']);
     Route::get('registration_requests', [AdminController::class,'registration_requests']);
@@ -48,8 +51,11 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
     Route::post('enrolStudent/{id}', [AdminController::class, 'enrolStudent']);
 });
 
+
+
+//<-------------------------LECTURER--------------------------------------->
 Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
-    
+    Route::get('lecturerHome', [LecturerController::class,'index']);
 });
 
 Route::get('/lecturer', [LecturerController::class,'index']);
@@ -58,9 +64,14 @@ Route::get('/lecturer/enrolled', [LecturerController::class,'enrolled']);
 Route::get('/lecturer/marks', [LecturerController::class,'marks']);
 Route::get('/lecturer/attendance', [LecturerController::class,'attendance']);
 
+
+
+
+//<--------------------------STUDENT--------------------------->
 Route::prefix('student')->middleware('auth')->group(function(){
 
         Route::get('/', [StudentController::class, 'student']);
+        Route::get('dashboard', [StudentController::class,'dashboard']);
         Route::get('mydetails', [StudentController::class, 'mydetails']);
         Route::get('selfregistration', [StudentController::class, 'selfregistration']);
         Route::get('courseworkmarks', [StudentController::class, 'courseworkmarks']);
@@ -72,6 +83,12 @@ Route::prefix('student')->middleware('auth')->group(function(){
         Route::get('graduation', [StudentController::class, 'graduation']);
 });
 
+
+
+
+
+
+//<--------------------------STAFF------------------------------------>
 Route::prefix('staff')->middleware('auth','isStaff')->group(function(){
     //Input staff routes in here
 });
@@ -81,4 +98,4 @@ Route::prefix('staff')->middleware('auth','isStaff')->group(function(){
 
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

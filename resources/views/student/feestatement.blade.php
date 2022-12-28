@@ -15,7 +15,7 @@
       <span>STUDENT</span>
     </div>
     <div class="header-icons">
-      
+      <a href="../student"><h3>HOMEPAGE</h3></a>
       <div class="account">
       </div>
     </div>
@@ -24,7 +24,7 @@
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a href="/student" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
+        <a href="dashboard" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
         <a href="mydetails" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
         <a href="selfregistration" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
         <a href="courseworkmarks" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
@@ -34,7 +34,6 @@
         <a href="feestructure" class="text-decoration-none"><i class="fa-sharp fa-solid fa-money-check-dollar"></i></i>  Fee Structure</a>
         <a href="feestatement" class="active" class="text-decoration-none"><i class="fa-solid fa-cash-register"></i>  Fee Statement</a>
         <a href="graduation" class="text-decoration-none"><i class="fa-solid fa-graduation-cap"></i>  Register for Graduation</a>
-        <a href="logout" class="text-decoration-none"><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
       </div>
     </nav>
 

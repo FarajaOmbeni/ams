@@ -14,7 +14,8 @@
     </div>
     <div class="header-icons">
       <div class="account">
-        <h4><h4>Admin Name</h4></h4>
+        <a href="../admin"><h4>Homepage</h4></a>
+        <h4>Admin Name</h4>
       </div>
     </div>
   </header>
@@ -22,7 +23,7 @@
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a href="../home">Home</a>
+        <a href="dashboard">Home</a>
         <a class="active" href="#">Acceptance Letter</a>
         <a href="enrol">Enrol Students</a>
         <a href="registration_requests">Send Registration Requests</a>

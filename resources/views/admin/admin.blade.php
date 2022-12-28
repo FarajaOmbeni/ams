@@ -15,7 +15,8 @@
     </div>
     <div class="header-icons">
       <div class="account">
-        <h4><h4>Admin Name</h4></h4>
+        <a href="../admin"><h4>Homepage</h4></a>
+        <h4>Admin Name</h4>
       </div>
     </div>
   </header>
@@ -23,12 +24,12 @@
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a class="active" href="../home">Home</a>
-        <a href="admin/accept">Acceptance Letter</a>
-        <a href="admin/enrol">Enrol Students</a>
-        <a href="admin/registration_requests">Send Registration Requests</a>
-        <a href="admin/assign_lecturers">Assign Lecturers</a>
-        <a href="admin/timetable">Timetable</a>
+        <a class="active" href="dashboard">Home</a>
+        <a href="accept">Acceptance Letter</a>
+        <a href="enrol">Enrol Students</a>
+        <a href="registration_requests">Send Registration Requests</a>
+        <a href="assign_lecturers">Assign Lecturers</a>
+        <a href="timetable">Timetable</a>
       </div>
     </nav>
 

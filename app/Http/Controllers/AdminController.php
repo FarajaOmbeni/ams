@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
-    public function index(){return view('admin/admin');}
+    public function index(){return view('admin/adminHome');}
+    public function dashboard(){return view('admin/admin');}
 
     public function accept(){
         $students = User::where('role','0')->orderBy('email','asc')->get();

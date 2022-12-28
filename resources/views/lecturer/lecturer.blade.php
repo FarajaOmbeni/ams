@@ -18,7 +18,7 @@
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a class="active" href="../../home">Home</a>
+        <a class="active" href="lecturerHome">Home</a>
         <a href="lecturer/units">Course Units</a>
         <a href="lecturer/enrolled">Students enrolled</a>
         <a href="lecturer/marks">Coursework Marks</a>

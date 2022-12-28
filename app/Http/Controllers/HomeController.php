@@ -28,6 +28,20 @@ class HomeController extends Controller
         $user_id = Auth::user()->id;
         $username = Auth::user()->name;
 
-        return view('home', compact('user_id','username'));
+        $role = Auth::user()->role;
+
+        if($role==0){
+            return view('student/studentHome', compact('user_id','username'));
+        }
+        if($role==1){
+            
+            return view('admin/adminHome', compact('user_id','username'));
+        }
+        if($role==2){
+            return view('student/studentHome', compact('user_id','username'));
+        }
+        if($role==3){
+            return view('staff/staffHome', compact('user_id','username'));
+        }
     }
 }
