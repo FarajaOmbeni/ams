@@ -12,6 +12,11 @@ class LecturerController extends Controller
 
     }
 
+    public function dashboard(){
+        return view('lecturer/lecturer');
+
+    }
+
     public function units(){
         // $units = Unit::where('unit_code','ICS2205')->get();
         $units = Unit::all();

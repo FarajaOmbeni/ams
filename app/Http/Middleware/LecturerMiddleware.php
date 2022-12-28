@@ -22,7 +22,7 @@ class LecturerMiddleware
             if(Auth::user()->role=='2'){
                 return $next($request);
             } else{
-                return redirect('/home')->with('message','Access Denied');
+                return redirect('/lecturerHome')->with('message','Access Denied');
             }
 
         }else{

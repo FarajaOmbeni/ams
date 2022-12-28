@@ -15,14 +15,11 @@
                     @endif
 
                     <!--GET LOGGED IN USER INFORMATION-->
-                    <h4>User ID</h4>
-                    {{$user_id}}
-                    <h4>User Name</h4>
-                    {{$username}} <br>
+
 
                     {{ __('You are logged in!') }}
 
-                    <a href="admin">You are an lecturer</a>
+                    <a href="lecturer/dashboard">You are a lecturer</a>
                 </div>
             </div>
         </div>

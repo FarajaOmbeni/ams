@@ -38,7 +38,7 @@ class HomeController extends Controller
             return view('admin/adminHome', compact('user_id','username'));
         }
         if($role==2){
-            return view('student/studentHome', compact('user_id','username'));
+            return view('lecturer/lecturerHome', compact('user_id','username'));
         }
         if($role==3){
             return view('staff/staffHome', compact('user_id','username'));

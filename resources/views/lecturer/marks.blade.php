@@ -13,15 +13,21 @@
     <div class="title">
       <span>Lecturer</span>
     </div>
+    <div class="header-icons">
+      <div class="account">
+        <a href="../lecturer"><h4>Homepage</h4></a>
+        <h4>Lecturer Name</h4>
+      </div>
+    </div>
   </header>
 
   <div class="container">
     <nav>
       <div class="side_navbar">
-        <a href="lecturerHome">Home</a>
+        <a href="dashboard">Home</a>
         <a href="units">Course Units</a>
         <a href="enrolled">Students enrolled</a>
-        <a class = "active" href="marks">Coursework Marks</a>
+        <a class = "active" href="#">Coursework Marks</a>
         <a href="attendance">Attendance</a>
       </div>
     </nav>

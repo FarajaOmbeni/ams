@@ -55,14 +55,15 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
 
 //<-------------------------LECTURER--------------------------------------->
 Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
-    Route::get('lecturerHome', [LecturerController::class,'index']);
+    Route::get('/', [LecturerController::class,'index']);
+    Route::get('dashboard', [LecturerController::class,'dashboard']);
+    Route::get('units', [LecturerController::class,'units']);
+    Route::get('enrolled', [LecturerController::class,'enrolled']);
+    Route::get('marks', [LecturerController::class,'marks']);
+    Route::get('attendance', [LecturerController::class,'attendance']);
 });
 
-Route::get('/lecturer', [LecturerController::class,'index']);
-Route::get('/lecturer/units', [LecturerController::class,'units']);
-Route::get('/lecturer/enrolled', [LecturerController::class,'enrolled']);
-Route::get('/lecturer/marks', [LecturerController::class,'marks']);
-Route::get('/lecturer/attendance', [LecturerController::class,'attendance']);
+
 
 
 
