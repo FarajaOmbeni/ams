@@ -34,8 +34,52 @@
 
     <div class="main-body">
      <h2>Home</h2>
+     <h1>COURSEWORK MARKS!</h1>
       <div class="promo_card"> 
-       <h1>COURSEWORK MARKS!</h1>
+
+      <div class="one">
+          <h2>Student Marks</h2>
+        </div>
+
+        <div class="two">
+          <h3>Edit in Student Course workmarks.</h3>
+        </div><br>
+
+        <div class="detailsform">
+          <h4>Coursework marks</h4><br>
+          <form>
+            <div class="pd-parent">
+
+            <div class="pd1">
+              <label for="description">Description:</label>
+              <input type="text" name="description" Placeholder="description" style="margin-left:27px;"><br><br>
+
+              <label for="score">Score:</label>
+              <input type="text" name="score" placeholder="score" style="margin-left: 70px"><br><br>
+
+              <label for="outOf">OUT OF:</label>
+              <input type="text" name="outOf" placeholder="outOf" style="margin-left: 60px"><br><br>
+              
+              <label for="student_id">Student ID:</label>
+              <input type="text" name="student_id" placeholder="student_id" style="margin-left: 35px">
+            </div>
+
+            <div class="pd1">
+
+              <label for="unit_code">Unit Code:</label>
+              <input type="text" name="unit_code" placeholder="unit_code" style="margin-left: 40px"><br><br>
+
+
+            </div>
+
+            </div>
+
+          
+
+          </form>
+
+        </div>
+       
       
       </div>
     </div>
@@ -59,6 +103,16 @@
 }
 body{
   background: #c0d4c2;
+}
+
+table{
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid;
+}
+table:nth-child(even){
+    background-color: #f2f2f2;
 }
 .header{
   display: flex;
@@ -147,5 +201,34 @@ nav{
 
 b{
   color: #2e8b57;
+}
+
+.detailsform{
+  background-color: lightgray;
+}
+
+.detailsform h4{
+  text-align: center;
+}
+.pd-parent{
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+}
+
+.pd1,.pd2{
+  display: inline-block;
+  width: 515px;
+  padding: 0.5rem;
+  
+}
+.pd2{
+  background: gray;
+}
+.pd1{
+  background: #767676;
+}
+label{
+  text-align: right;
 }
 </style>

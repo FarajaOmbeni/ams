@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Unit;
+use App\Models\Score;
+use App\Models\Attendance;
 
 class LecturerController extends Controller
 {
@@ -30,12 +32,14 @@ class LecturerController extends Controller
     }
 
     public function marks(){
-        return view('lecturer/marks');
+        $marks = Score::all();
+        return view('lecturer/marks',['marks'=>$marks]);
 
     }
 
     public function attendance(){
-        return view('lecturer/attendance');
+        $attendance = Attendance::all();
+        return view('lecturer/attendance',['attendance'=>$attendance]);
 
     }
 

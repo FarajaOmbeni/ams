@@ -36,6 +36,20 @@
      <h2>Home</h2>
       <div class="promo_card"> 
        <h1>STUDENTS ENROLLED!</h1>
+       <table>
+       <tr>
+        <th>course name</th>
+        <th>course code</th>
+        <th>unit code</th>
+       </tr>
+       
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+</table>
       
       </div>
     </div>
@@ -59,6 +73,16 @@
 }
 body{
   background: #c0d4c2;
+}
+
+table{
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid;
+}
+table:nth-child(even){
+    background-color: #f2f2f2;
 }
 .header{
   display: flex;
