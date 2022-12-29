@@ -177,10 +177,10 @@
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family:serif;
 }
 p{
-  font-family: "Poppins", sans-serif;
+  font-family:serif;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -188,7 +188,7 @@ p{
 }
 
 body{
-  background:  #f77a06;
+  background:  #F9A603;
 }
 .header{
   display: flex;
@@ -260,7 +260,7 @@ nav{
   padding: 1rem;
 }
 .promo_card{
-  background-image: linear-gradient(rgb(235, 235, 235), #d5e5ff), url(../Index/Images/agentHomeBg.jpg);
+  background-color: white;
   width: 100%;
   height: 130vh;
   margin-top: 10px;

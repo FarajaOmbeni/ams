@@ -37,9 +37,101 @@
     </nav>
 
     <div class="main-body">
-        <h1>THIS IS THE HOME PAGE</h1>
+        <h1>STUDENT PROFILE</h1>
       <div class="promo_card">
-        <h1>Promo Card</h1>
+
+        <div class="picture">
+        <img src="myles.jpg" width="200px" height="230px" margin-top="10px">
+          <h5>Johnson Adebayo Myles</h5>
+
+        </div><br><br>
+
+        <div class="details">
+          <table>
+            <tr>
+              <td style="padding-left: 268px; background-color: lightgray;">Student No:</td>
+              <td>&emsp;1999</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 285px; background-color: lightgray;">Surname:</td>
+              <td>&emsp;Johnson</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 253px; background-color: lightgray;">Other Names:</td>
+              <td>&emsp;Adebayo Johnson</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 259px; background-color: lightgray;">Date of Birth:</td>
+              <td>&emsp;20-20-2022</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 240px; background-color: lightgray;">Mobile Number:</td>
+              <td>&emsp;+2547787767</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 245px; background-color: lightgray;">Email-Address:</td>
+              <td>&emsp;mylesadebayo@gmail.com</td>
+            </tr>
+
+            <tr>
+              <td style="padding-left: 290px; background-color: lightgray;">Religion:</td>
+              <td>&emsp;Christianity</td>
+            </tr>
+
+
+            
+          </table>
+        </div><br><br><br><br><br><br><br><br><br><br>
+
+        <div class="programs">
+          <h4>Academic Programmes</h4><br>
+          <table>
+            <tr>
+              <th>Programme</th>
+              <th>Syllabus</th>
+              <th>Status</th>
+              <th>Intake</th>
+              <th>&emsp;&emsp;&emsp;&emsp;</th>
+            </tr>
+
+            <tr>
+              <td>Bachelor of Science in Informatics and Computer Science</td>
+              <td>BICS(April)-18</td>
+              <td>Open</td>
+              <td>January 2021</td>
+              <td>Coursework | Attendance</td>
+              
+            </tr>
+          </table><br><br><br>
+        </div>
+
+        <div class="mentor">
+          <h4>Current Mentor</h4><br>
+          <table>
+            <tr>
+              <th>Curent Mentor</th>
+              <th>Mentor's Email</th>
+              <th>Date Last Seen</th>
+              <th>Mentoring Feedback Form</th>
+              <th>Strathmore University Professional License</th>
+            </tr>
+
+            <tr>
+              <td>Shiundu, Bernard</td>
+              <td>bshiundu@strathmore.edu</td>
+              <td>NOT YET SEEN</td>
+              <td>Fill in the Mentoring Feedback Form</td>
+              <td>Take the survey</td>
+              
+            </tr>
+          </table>
+        </div>
+
       </div>
     </div>
     </div>
@@ -48,6 +140,31 @@
 </html>
 
 <style>
+
+.picture{
+  width: 200px;
+  height: 230px;
+  margin-top: 50px;
+  border-radius: 8px;
+  background-size: contain;
+  background-color: gray;
+}
+.details{
+  width: 600px;
+  margin-left:20%;
+  margin-top:-23.6%
+}
+table,td, th{
+  border: 0.1px solid gray;
+  padding: 2px 5px;
+  border-collapse: collapse;
+  
+}
+th{
+  background:#F9A603;
+}
+
+
   /*  import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 *{
@@ -57,10 +174,10 @@
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: serif;
 }
 p{
-  font-family: "Poppins", sans-serif;
+  font-family: serif;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -68,7 +185,7 @@ p{
 }
 
 body{
-  background:  #f77a06;
+  background:  #F9A603;
 }
 .header{
   display: flex;
@@ -138,11 +255,12 @@ nav{
 .main-body{
   width: 80%;
   padding: 1rem;
+  
 }
 .promo_card{
-  background-image: linear-gradient(rgb(235, 235, 235), #d5e5ff), url(../Index/Images/agentHomeBg.jpg);
+  background-color: white;
   width: 100%;
-  height: 200px;
+  height: 100vh;
   margin-top: 10px;
   border-radius: 8px;
   padding: 0.5rem 1rem 1rem 3rem;
