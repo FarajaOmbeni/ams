@@ -50,8 +50,8 @@
         </div><br>
 
         <div class="detailsform">
-          <h4>Personal details</h4><br>
           <form>
+          <h4>Personal details</h4>
             <div class="pd-parent">
 
             <div class="pd1">
@@ -104,6 +104,55 @@
 
             </div>
 
+            <h4>Parents/Guardian details</h4>
+            <div class="pd-parent">
+
+            <div class="pd1">
+              <label for="father">Father's Name:</label>
+              <input type="text" name="father" Placeholder="Father's Name" style="margin-left:123px;"><br><br>
+
+              <label for="father-mobile">Father's Mobile Number:</label>
+              <input type="text" name="father-mobile" placeholder="Father's Mobile" style="margin-left: 50px"><br><br>
+
+              <label for="mother">Mother's Name:</label>
+              <input type="text" name="mother" placeholder="Mother's Name" style="margin-left: 118px"><br><br>
+
+              <label for="mother-mobile">Mother's Mobile Number:</label>
+              <input type="text" name="mother-mobile" placeholder="Mother's Mobile" style="margin-left: 45px"><br><br>
+              
+              <label for="guardian">Guardian's Name:</label>
+              <input type="text" name="guardian" placeholder="Guardian's Name" style="margin-left: 98px"><br><br>
+
+              <label for="guardian-mobile">Guardian's Mobile Number:</label>
+              <input type="text" name="guardian-mobile" placeholder="Guardian's Mobile" style="margin-left: 26px">
+            </div>
+
+            <div class="pd2">
+              <label for="father-email">Father's Email:</label>
+              <input type="text" name="father-email" Placeholder="Father's Email" style="margin-left:109px;"><br><br>
+
+              <label for="father-occupation">Father's Occupation:</label>
+              <input type="text" name="father-occupation" placeholder="Father's Occupation" style="margin-left: 60px"><br><br>
+
+              <label for="mother-email">Mother's Email:</label>
+              <input type="text" name="mother-email" placeholder="Mother's Email" style="margin-left: 105px"><br><br>
+
+              <label for="mother-occupation">Mother's Occupation:</label>
+              <input type="text" name="mother-occupation" placeholder="Mother's Occupation" style="margin-left: 53px"><br><br>
+              
+              <label for="guardian-email">Guardian's Email:</label>
+              <input type="text" name="guardian-email" placeholder="Guardian's Email" style="margin-left: 85px"><br><br>
+
+              <label for="guardian-occupation">Guardian's Occupation:</label>
+              <input type="text" name="guardian-occupation" placeholder="Guardian's Occupation" style="margin-left: 35px">
+
+
+            </div>
+
+            </div><br>
+
+            <input type="submit" value="Save" name="save"><br>
+
           
 
           </form>
@@ -128,10 +177,10 @@
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family:serif;
 }
 p{
-  font-family: "Poppins", sans-serif;
+  font-family:serif;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -139,7 +188,7 @@ p{
 }
 
 body{
-  background:  #f77a06;
+  background:  #F9A603;
 }
 .header{
   display: flex;
@@ -178,7 +227,7 @@ nav{
   padding: 1px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 130vh;
   background:white;
 }
 .side_navbar span{
@@ -211,9 +260,9 @@ nav{
   padding: 1rem;
 }
 .promo_card{
-  background-image: linear-gradient(rgb(235, 235, 235), #d5e5ff), url(../Index/Images/agentHomeBg.jpg);
+  background-color: white;
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   margin-top: 10px;
   border-radius: 8px;
   padding: 0.5rem 1rem;
@@ -262,13 +311,22 @@ nav{
   
 }
 .pd2{
-  background: gray;
+  background: #d6cfc7;
 }
 .pd1{
-  background: #767676;
+  background: #d9dddc;
 }
 label{
   text-align: right;
+}
+.save{
+  text-align: right;
+}
+
+input[type="submit"]{
+  margin-left: 45%;
+  margin-bottom: 30px;
+  padding: 7px 35px;
 }
 
 </style>

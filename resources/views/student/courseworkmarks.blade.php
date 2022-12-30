@@ -38,9 +38,51 @@
     </nav>
 
     <div class="main-body">
-        <h1>THIS IS THE HOME PAGE</h1>
+        <h1>Coursework Marks</h1>
+
       <div class="promo_card">
         <h1>Promo Card</h1>
+
+      <div class="table">
+        <table>
+            <tr>
+              <th>Academic Year: 2022-2023 Semester: FIRST SEMESTER <th>
+            </tr>
+
+          <table>
+            <tr>
+              <th>&nbsp;&emsp;&emsp;</th>
+              <th>Subject</th>
+              <th>
+                <table>
+                  <tr>
+                    
+                      <tr>
+                    <th>Ordinary</th>
+                      </tr>
+                      <tr>
+                      <td>Attempt No.</td>
+                      <td>Mark</td>
+                      </tr>
+                    </table>
+                    <th>Supplementary</th>
+                  </tr>
+                  <tr>
+                    <table>
+                      <td>Attempt No.</td>
+                      <td>Mark</td>
+                      <td>Attempt No.</td>
+                      <td>Mark</td>
+                    </table>
+                  </tr>
+              
+              </th>
+            </tr>
+          </table>
+
+        </table>
+      </div>
+
       </div>
     </div>
     </div>
@@ -59,10 +101,10 @@
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family:serif;
 }
 p{
-  font-family: "Poppins", sans-serif;
+  font-family:serif;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -70,7 +112,7 @@ p{
 }
 
 body{
-  background:  #f77a06;
+  background:  #F9A603;
 }
 .header{
   display: flex;
@@ -142,9 +184,9 @@ nav{
   padding: 1rem;
 }
 .promo_card{
-  background-image: linear-gradient(rgb(235, 235, 235), #d5e5ff), url(../Index/Images/agentHomeBg.jpg);
+  background-color: white;
   width: 100%;
-  height: 200px;
+  height: 100vh;
   margin-top: 10px;
   border-radius: 8px;
   padding: 0.5rem 1rem 1rem 3rem;
@@ -174,6 +216,16 @@ nav{
 }
 .promo_card a:active{
   opacity: 0.7;
+}
+
+
+
+
+table,td, th{
+  border: 0.1px solid gray;
+  padding: 2px 5px;
+  border-collapse: collapse;
+  
 }
 
 </style>
