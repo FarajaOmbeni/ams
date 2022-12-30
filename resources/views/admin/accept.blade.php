@@ -34,14 +34,14 @@
         <h2>Acceptance Letter</h2><br><br>
         <form action="sendLetter" method="post">
           @csrf
-            <select name="email" id="input-text">
+            <select name="email" class="form-control">
               @foreach($students as $student)
               <option value="{{$student->email}}" name="email">{{$student->email}}</option>
               @endforeach
             </select>
              <br><br><br>
             <label for="letter">Letter</label><br>
-            <textarea name="letter" id="input-textarea" cols="30" rows="10"></textarea><br>
+            <textarea name="letter" class="form-control" cols="30" rows="10"></textarea><br>
             @error('letter')
             <ul>
               <li style="color:red">{{$message}}</li>

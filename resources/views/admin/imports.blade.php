@@ -35,7 +35,7 @@
       background-color: white;
       width: 60%;
       margin-left: 20%;
-      height: 80%;
+      height: 100%;
   }
   
   table{

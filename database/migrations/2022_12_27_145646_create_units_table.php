@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('units', function (Blueprint $table) {
             $table->id();
-            $table->integer('lecturer_id')->references('id')->on('users')->default(null);
+            $table->integer('lecturer_id')->references('id')->on('users')->nullable();
             $table->string('name')->unique();
             $table->integer('registered_students')->unique()->nullable()->references('id')->on('users');
             $table->string('unit_code')->unique();
+            $table->integer('isdeleted')->default('0');
             $table->string('course_code')->references('course_code')->on('courses');
             $table->timestamps();
         });
