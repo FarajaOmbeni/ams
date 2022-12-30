@@ -103,7 +103,9 @@ class AdminController extends Controller
         $add->capacity = request('capacity');
         $add->save();
 
-        return redirect('admin/rooms');
+        return redirect('admin/rooms')->with('<div class="alert alert-success" role="alert">
+        This is a success alert—check it out!
+      </div>');
     }
     public function editRoom($id){
         $edit = new Room();
