@@ -21,7 +21,7 @@
     </div>
   </header>
 
-  <div class="container">
+  <div class="container_me"">
     <nav>
       <div class="side_navbar">
         <a class="active" href="dashboard">Home</a>

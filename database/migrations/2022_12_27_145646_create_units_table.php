@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('units', function (Blueprint $table) {
             $table->id();
-            $table->integer('lecturer_id')->references('id')->on('users');
+            $table->integer('lecturer_id')->references('id')->on('users')->default(null);
             $table->string('name')->unique();
             $table->integer('registered_students')->unique()->nullable()->references('id')->on('users');
             $table->string('unit_code')->unique();

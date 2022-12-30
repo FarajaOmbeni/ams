@@ -20,7 +20,7 @@
     </div>
   </header>
 
-  <div class="container">
+  <div class="container_me"">
     <nav>
       <div class="side_navbar">
         <a href="dashboard" class="active" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
