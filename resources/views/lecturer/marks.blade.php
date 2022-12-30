@@ -69,6 +69,8 @@
               <label for="unit_code">Unit Code:</label>
               <input type="text" name="unit_code" placeholder="unit_code" style="margin-left: 40px"><br><br>
 
+              <input type="submit" name="SUBMIT">
+
 
             </div>
 

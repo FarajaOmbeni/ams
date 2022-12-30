@@ -61,6 +61,7 @@ Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
     Route::get('enrolled', [LecturerController::class,'enrolled']);
     Route::get('marks', [LecturerController::class,'marks']);
     Route::get('attendance', [LecturerController::class,'attendance']);
+    Route::post('attendance/mark', [LecturerController::class,'MarkAttendance']);
 });
 
 

@@ -47,7 +47,7 @@
 
         <div class="detailsform">
           <h4>Students Attendance</h4><br>
-          <form>
+          <form action="lecturer/attendance/mark" method="POST">
             <div class="pd-parent">
 
             <div class="pd1">
@@ -65,6 +65,8 @@
 
               <label for="unit_code">Unit Code:</label>
               <input type="text" name="unit_code" placeholder="unit_code" style="margin-left: 40px"><br><br>
+
+              <input type="submit" name="SUBMIT">
 
 
             </div>

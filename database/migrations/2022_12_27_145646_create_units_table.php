@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('lecturer_id')->references('id')->on('users');
             $table->string('name')->unique();
+            $table->integer('registered_students')->unique()->nullable()->references('id')->on('users');
             $table->string('unit_code')->unique();
             $table->string('course_code')->references('course_code')->on('courses');
             $table->timestamps();
