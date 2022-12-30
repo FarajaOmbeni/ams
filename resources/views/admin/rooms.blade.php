@@ -31,6 +31,15 @@
 
     <div class="main-body">
 
+      <div>
+        @if(session()->has('message'))
+
+        <div class="alert alert-success" role="alert">
+          <button type="button" class="close" data-dismiss="alert">x</button>
+          {{session()->get('message')}}
+        </div>
+      </div>
+
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Add new room
           </button><br><br>
@@ -108,7 +117,7 @@
                 <form action="deleteRoom/{{$room->id}}" method="post">
                     @csrf
                     <input type="hidden" name="isdeleted" value="1">
-                    <td ><input type="submit" value="Delete" class="btn btn-primary"></td>
+                    <td ><input type="submit" value="Delete" class="btn btn-danger"></td>
                 </form>
             </tr>  
             @endforeach

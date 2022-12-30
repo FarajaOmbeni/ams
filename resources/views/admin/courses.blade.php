@@ -108,7 +108,7 @@
                 <form action="deleteCourse/{{$course->id}}" method="post">
                     @csrf
                     <input type="hidden" name="isdeleted" value="1">
-                    <td ><input type="submit" value="Delete" class="btn btn-primary"></td>
+                    <td ><input type="submit" value="Delete" class="btn btn-danger"></td>
                 </form>
             </tr>  
             @endforeach
