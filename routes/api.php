@@ -25,5 +25,3 @@ Route::post('store-form', [FormController::class, 'store_form_api']);
 //API route for GET method
 Route::get('get-form-data', [FormController::class, 'getFormData']);
 Route::get('get-form-data/{id}', [FormController::class, 'getFormDataByID']);
-
-Route::apiResource('lecturers', [LecturerAPIController::class]);
