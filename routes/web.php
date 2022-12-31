@@ -24,9 +24,6 @@ Route::get('/', function () {
 
 
 
-
-
-
 Route::get('/post',[FormController::class, 'index']);
 //posting data to the database
 Route::post('/postForm',[FormController::class, 'store_form']);
@@ -43,12 +40,37 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
     Route::get('/', [AdminController::class,'index']);
     Route::get('dashboard', [AdminController::class,'dashboard']);
     Route::get('accept', [AdminController::class,'accept']);
+
+    //Enrol Students
     Route::get('enrol', [AdminController::class,'enrol']);
-    Route::get('registration_requests', [AdminController::class,'registration_requests']);
-    Route::get('assign_lecturers', [AdminController::class,'assign_lecturers']);
-    Route::get('timetable', [AdminController::class,'timetable']);
-    Route::post('sendLetter', [AdminController::class, 'acceptLetter']);
     Route::post('enrolStudent/{id}', [AdminController::class, 'enrolStudent']);
+    Route::post('sendLetter', [AdminController::class, 'acceptLetter']);
+    //registration requests
+    Route::get('registration_requests', [AdminController::class,'registration_requests']);
+    //lecturers
+    Route::get('assign_lecturers', [AdminController::class,'assign_lecturers']);
+    Route::get('lecturers', [AdminController::class, 'lecturers']);
+    Route::post('addlecturer', [AdminController::class, 'addLecturers']);
+    Route::post('assign/lec_id={lec_id}/unit_id={unit_id}', [AdminController::class, 'assign']);
+
+    //rooms
+    Route::get('rooms', [AdminController::class, 'rooms']);
+    Route::post('addroom', [AdminController::class, 'addRooms']);
+    Route::post('rooms/{id}',[AdminController::class, 'editRoom']);
+    Route::post('deleteRoom/{id}',[AdminController::class, 'deleteRoom']);
+    //courses
+    Route::get('courses', [AdminController::class, 'courses']);
+    Route::post('addcourse',[AdminController::class, 'addCourse']);
+    Route::post('courses/{id}',[AdminController::class, 'editCourse']);
+    Route::post('deleteCourse/{id}',[AdminController::class, 'deleteCourse']);
+    //units
+    Route::get('units', [AdminController::class, 'units']);
+    Route::post('addunit',[AdminController::class, 'addUnit']);
+    Route::post('units/{id}',[AdminController::class, 'editUnit']);
+    Route::post('deleteunit/{id}',[AdminController::class, 'deleteUnit']);
+
+    //timetable
+    Route::get('timetable', [AdminController::class,'timetable']);
 });
 
 
@@ -61,6 +83,7 @@ Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
     Route::get('enrolled', [LecturerController::class,'enrolled']);
     Route::get('marks', [LecturerController::class,'marks']);
     Route::get('attendance', [LecturerController::class,'attendance']);
+    Route::post('attendance/mark', [LecturerController::class,'MarkAttendance']);
 });
 
 

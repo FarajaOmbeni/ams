@@ -21,7 +21,7 @@
     </div>
   </header>
 
-  <div class="container">
+  <div class="container_me"">
     <nav>
       <div class="side_navbar">
         <a href="dashboard">Home</a>
@@ -38,17 +38,22 @@
        <h1>STUDENTS ENROLLED!</h1>
        <table>
        <tr>
-        <th>course name</th>
-        <th>course code</th>
-        <th>unit code</th>
+
+       <th>course code</th>
+       <th>course name</th>
+       <th>unit code</th>
+       <th>student ID</th>
+
        </tr>
-       
+       @foreach($units as $unit)
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{$unit->course_code}}</td>
+            <td>{{$unit->name}}</td>
+            <td>{{$unit->unit_code}}</td>
+            <td>{{$unit->registered_student}}</td>
+            
         </tr>
-        
+        @endforeach
 </table>
       
       </div>
