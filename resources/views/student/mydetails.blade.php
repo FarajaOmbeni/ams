@@ -29,11 +29,6 @@
         <a href="selfregistration" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
         <a href="courseworkmarks" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
         <a href="attendance" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
-        <a href="progressreport" class="text-decoration-none"><i class="fa-solid fa-bars-progress"></i>  Progress Report</a>
-        <a href="examcard" class="text-decoration-none"><i class="fa-solid fa-scroll"></i>  Exam Card</a>
-        <a href="feestructure" class="text-decoration-none"><i class="fa-sharp fa-solid fa-money-check-dollar"></i></i>  Fee Structure</a>
-        <a href="feestatement" class="text-decoration-none"><i class="fa-solid fa-cash-register"></i>  Fee Statement</a>
-        <a href="graduation" class="text-decoration-none"><i class="fa-solid fa-graduation-cap"></i>  Register for Graduation</a>
       </div>
     </nav>
 
@@ -51,33 +46,33 @@
 
         <div class="detailsform">
           <form>
-          <h4>Personal details</h4>
+            <h4>Personal details</h4>
             <div class="pd-parent">
 
             <div class="pd1">
               <label for="ID">ID/Passport Number:</label>
-              <input type="text" name="id" Placeholder="id" style="margin-left:27px;"><br><br>
+              <input type="text" name="id" Placeholder="id" style="margin-left:33px;"><br><br>
 
               <label for="postal-address">Postal Address:</label>
               <input type="text" name="postal-address" placeholder="Postal-address" style="margin-left: 70px"><br><br>
 
               <label for="town">Town:</label>
-              <input type="text" name="town" placeholder="Town" style="margin-left: 145px"><br><br>
+              <input type="text" name="town" placeholder="Town" style="margin-left: 129px"><br><br>
 
               <label for="home-country">Home County:</label>
-              <select name="home-county" id="home-county" style="margin-left: 77px">
+              <select name="home-county" id="home-county" style="margin-left: 75px">
                 <option value="embu">Embu</option>
                 <option value="foreigner">Foreigner</option>
                 <option value="busia">Busia</option>
               </select><br><br>
               
               <label for="residence">Residence:</label>
-              <input type="text" name="residence" placeholder="residence" style="margin-left: 105px">
+              <input type="text" name="residence" placeholder="residence" style="margin-left: 98px">
             </div>
 
             <div class="pd2">
               <label for="religion">Religion</label>
-              <select name="religion" id="religion" style="margin-left: 120px">
+              <select name="religion" id="religion" style="margin-left: 109px">
                 <option value="christian">Christian</option>
                 <option value="muslim">Muslim</option>
                 <option value="hindu">Hindu</option>
@@ -109,19 +104,19 @@
 
             <div class="pd1">
               <label for="father">Father's Name:</label>
-              <input type="text" name="father" Placeholder="Father's Name" style="margin-left:123px;"><br><br>
+              <input type="text" name="father" Placeholder="Father's Name" style="margin-left:110px;"><br><br>
 
               <label for="father-mobile">Father's Mobile Number:</label>
-              <input type="text" name="father-mobile" placeholder="Father's Mobile" style="margin-left: 50px"><br><br>
+              <input type="text" name="father-mobile" placeholder="Father's Mobile" style="margin-left: 46px"><br><br>
 
               <label for="mother">Mother's Name:</label>
-              <input type="text" name="mother" placeholder="Mother's Name" style="margin-left: 118px"><br><br>
+              <input type="text" name="mother" placeholder="Mother's Name" style="margin-left: 104px"><br><br>
 
               <label for="mother-mobile">Mother's Mobile Number:</label>
-              <input type="text" name="mother-mobile" placeholder="Mother's Mobile" style="margin-left: 45px"><br><br>
+              <input type="text" name="mother-mobile" placeholder="Mother's Mobile" style="margin-left: 39px"><br><br>
               
               <label for="guardian">Guardian's Name:</label>
-              <input type="text" name="guardian" placeholder="Guardian's Name" style="margin-left: 98px"><br><br>
+              <input type="text" name="guardian" placeholder="Guardian's Name" style="margin-left: 90px"><br><br>
 
               <label for="guardian-mobile">Guardian's Mobile Number:</label>
               <input type="text" name="guardian-mobile" placeholder="Guardian's Mobile" style="margin-left: 26px">
@@ -129,19 +124,19 @@
 
             <div class="pd2">
               <label for="father-email">Father's Email:</label>
-              <input type="text" name="father-email" Placeholder="Father's Email" style="margin-left:109px;"><br><br>
+              <input type="text" name="father-email" Placeholder="Father's Email" style="margin-left:93px;"><br><br>
 
               <label for="father-occupation">Father's Occupation:</label>
-              <input type="text" name="father-occupation" placeholder="Father's Occupation" style="margin-left: 60px"><br><br>
+              <input type="text" name="father-occupation" placeholder="Father's Occupation" style="margin-left: 55px"><br><br>
 
               <label for="mother-email">Mother's Email:</label>
-              <input type="text" name="mother-email" placeholder="Mother's Email" style="margin-left: 105px"><br><br>
+              <input type="text" name="mother-email" placeholder="Mother's Email" style="margin-left: 84px"><br><br>
 
               <label for="mother-occupation">Mother's Occupation:</label>
-              <input type="text" name="mother-occupation" placeholder="Mother's Occupation" style="margin-left: 53px"><br><br>
+              <input type="text" name="mother-occupation" placeholder="Mother's Occupation" style="margin-left: 48px"><br><br>
               
               <label for="guardian-email">Guardian's Email:</label>
-              <input type="text" name="guardian-email" placeholder="Guardian's Email" style="margin-left: 85px"><br><br>
+              <input type="text" name="guardian-email" placeholder="Guardian's Email" style="margin-left: 71px"><br><br>
 
               <label for="guardian-occupation">Guardian's Occupation:</label>
               <input type="text" name="guardian-occupation" placeholder="Guardian's Occupation" style="margin-left: 35px">

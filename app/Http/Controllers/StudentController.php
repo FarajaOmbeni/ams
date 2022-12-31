@@ -29,23 +29,6 @@ class StudentController extends Controller
     public function attendance(){
         return view('student/attendance');
     }
-
-    public function progressreport(){
-        return view('student/progressreport');
-    }
-
-    public function examcard(){
-        return view('student/examcard');
-    }
-
-    public function feestructure(){
-        return view('student/feestructure');
-    }
-    public function feestatement(){
-        return view('student/feestatement');
-    }
-    public function graduation(){
-        return view('student/graduation');
-    }
+    
 }
 

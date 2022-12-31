@@ -29,11 +29,6 @@
         <a href="selfregistration" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
         <a href="courseworkmarks" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
         <a href="attendance" class="active" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
-        <a href="progressreport" class="text-decoration-none"><i class="fa-solid fa-bars-progress"></i>  Progress Report</a>
-        <a href="examcard" class="text-decoration-none"><i class="fa-solid fa-scroll"></i>  Exam Card</a>
-        <a href="feestructure" class="text-decoration-none"><i class="fa-sharp fa-solid fa-money-check-dollar"></i></i>  Fee Structure</a>
-        <a href="feestatement" class="text-decoration-none"><i class="fa-solid fa-cash-register"></i>  Fee Statement</a>
-        <a href="graduation" class="text-decoration-none"><i class="fa-solid fa-graduation-cap"></i>  Register for Graduation</a>
       </div>
     </nav>
 
@@ -59,10 +54,10 @@
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: serif;
 }
 p{
-  font-family: "Poppins", sans-serif;
+  font-family: serif;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -70,7 +65,7 @@ p{
 }
 
 body{
-  background:  #f77a06;
+  background:  #F9A603;
 }
 .header{
   display: flex;
@@ -142,7 +137,7 @@ nav{
   padding: 1rem;
 }
 .promo_card{
-  background-image: linear-gradient(rgb(235, 235, 235), #d5e5ff), url(../Index/Images/agentHomeBg.jpg);
+  background-color: white;
   width: 100%;
   height: 200px;
   margin-top: 10px;

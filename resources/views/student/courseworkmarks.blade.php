@@ -29,11 +29,6 @@
         <a href="selfregistration" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
         <a href="courseworkmarks" class="active" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
         <a href="attendance" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
-        <a href="progressreport" class="text-decoration-none"><i class="fa-solid fa-bars-progress"></i>  Progress Report</a>
-        <a href="examcard" class="text-decoration-none"><i class="fa-solid fa-scroll"></i>  Exam Card</a>
-        <a href="feestructure" class="text-decoration-none"><i class="fa-sharp fa-solid fa-money-check-dollar"></i></i>  Fee Structure</a>
-        <a href="feestatement" class="text-decoration-none"><i class="fa-solid fa-cash-register"></i>  Fee Statement</a>
-        <a href="graduation" class="text-decoration-none"><i class="fa-solid fa-graduation-cap"></i>  Register for Graduation</a>
       </div>
     </nav>
 
@@ -51,32 +46,12 @@
 
           <table>
             <tr>
-              <th>&nbsp;&emsp;&emsp;</th>
               <th>Subject</th>
-              <th>
-                <table>
-                  <tr>
-                    
-                      <tr>
-                    <th>Ordinary</th>
-                      </tr>
-                      <tr>
-                      <td>Attempt No.</td>
-                      <td>Mark</td>
-                      </tr>
-                    </table>
-                    <th>Supplementary</th>
-                  </tr>
-                  <tr>
-                    <table>
-                      <td>Attempt No.</td>
-                      <td>Mark</td>
-                      <td>Attempt No.</td>
-                      <td>Mark</td>
-                    </table>
-                  </tr>
-              
-              </th>
+              <th>Mark</th>
+            </tr>
+
+            <tr>
+              <th></th>
             </tr>
           </table>
 

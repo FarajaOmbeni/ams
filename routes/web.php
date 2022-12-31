@@ -77,11 +77,7 @@ Route::prefix('student')->middleware('auth')->group(function(){
         Route::get('selfregistration', [StudentController::class, 'selfregistration']);
         Route::get('courseworkmarks', [StudentController::class, 'courseworkmarks']);
         Route::get('attendance', [StudentController::class, 'attendance']);
-        Route::get('progressreport', [StudentController::class, 'progressreport']);
-        Route::get('examcard', [StudentController::class, 'examcard']);
-        Route::get('feestructure', [StudentController::class, 'feestructure']);
-        Route::get('feestatement', [StudentController::class, 'feestatement']);
-        Route::get('graduation', [StudentController::class, 'graduation']);
+        
 });
 
 

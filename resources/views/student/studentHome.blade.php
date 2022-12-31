@@ -18,7 +18,7 @@
 
                     {{ __('You are logged in!') }}
 
-                    <a href="student/dashboard">You are an student</a>
+                    <a href="student/dashboard">You are a student</a>
                 </div>
             </div>
         </div>
