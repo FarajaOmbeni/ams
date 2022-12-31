@@ -21,7 +21,7 @@
     </div>
   </header>
 
-  <div class="container_me"">
+  <div class="container_me">
     <nav>
       <div class="side_navbar">
         <a href="dashboard" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
@@ -36,7 +36,7 @@
         <h1>Subject Registration for the 2022-2023 Academic Year</h1>
         <hr>
       <div class="promo_card">
-        <h1>Promo Card</h1>
+        
       </div>
     </div>
     </div>
