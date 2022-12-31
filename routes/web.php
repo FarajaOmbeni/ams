@@ -24,9 +24,6 @@ Route::get('/', function () {
 
 
 
-
-
-
 Route::get('/post',[FormController::class, 'index']);
 //posting data to the database
 Route::post('/postForm',[FormController::class, 'store_form']);

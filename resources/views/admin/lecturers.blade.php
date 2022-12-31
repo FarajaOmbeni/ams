@@ -52,7 +52,6 @@
                     <select name="role" hidden>
                       <option value="2" name="role" selected>Lecturer</option>
                     </select>
-                    <label for="password">Default Password</label>
                     <input type="text" name="password" style="border-bottom: 1px solid" value="password" readonly required><br><br>
               </div>
               <div class="modal-footer">
