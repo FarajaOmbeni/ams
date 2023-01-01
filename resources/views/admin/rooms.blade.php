@@ -30,16 +30,6 @@
     </nav>
 
     <div class="main-body">
-
-      <div>
-        @if(session()->has('message'))
-
-        <div class="alert alert-success" role="alert">
-          <button type="button" class="close" data-dismiss="alert">x</button>
-          {{session()->get('message')}}
-        </div>
-      </div>
-
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Add new room
           </button><br><br>
@@ -122,6 +112,16 @@
             </tr>  
             @endforeach
         </table> 
+
+        <div>
+          @if(session()->has('message'))
+  
+          <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            {{session()->get('message')}}
+          @endif
+          </div>
+        </div>
     </div>
       
     </div>

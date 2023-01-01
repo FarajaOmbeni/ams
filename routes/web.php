@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\LecturerController;
+use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\LecturerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,11 @@ Route::get('/post/{id}/update', [FormController::class, 'updateForm']);
 Route::post('/post/{id}/edit', [FormController::class, 'editForm']);
 //Displaying all the data in a view
 Route::get('/allposts', [FormController::class, 'allposts']);
+
+//Applications and contact us
+Route::get('/apply', [GeneralController::class, 'apply']);
+Route::post('/postapply', [GeneralController::class, 'postApply']);
+Route::post('/contactForm', [GeneralController::class, 'postContact']);
 
 
 

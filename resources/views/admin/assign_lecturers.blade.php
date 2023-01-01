@@ -37,16 +37,20 @@
         @foreach($lecturers as $lecturer)
         <form class="form-group" action="assign/lec_id={{$lecturer->id}}/unit_id={{$unit->id}}" method="post">
           @csrf
+          @endforeach
+          @endforeach
             <label for="lecturers" >Lecturer</label><br>
             <select class="form-control">
-              
+                <option value="" selected hidden>Lecturer</option>
+              @foreach($lecturers as $lecturer)
                 <option name="lecturer_id" value="{{$lecturer->id}}">{{$lecturer->name}}</option>
               @endforeach
             </select><br><br><br>
 
             <label for="classes" >Unit</label><br>
             <select class="form-control">
-              
+                <option value="" selected hidden>Unit</option>
+              @foreach($units as $unit)
                 <option name="unit_id" value="{{$unit->unit_code}}">{{$unit->name}}</option>
               @endforeach
             </select><br><br><br>
