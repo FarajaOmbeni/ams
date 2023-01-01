@@ -1,3 +1,5 @@
+@extends('admin/imports')
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,154 +24,150 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Nigerian Prince University</a>
+                <a class="navbar-brand" href="/" style="color: #000">Nigerian Prince University</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login">AMS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about" style="color: #000">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services" style="color: #000">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio" style="color: #000">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login" style="color: #000">AMS</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Our University aims to unlock your potential in your journey to success!</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Apply today! </p>
-                        <a class="btn btn-primary btn-xl" href="apply">Register</a>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- About-->
-        <section class="page-section bg-primary" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Start learning with a course you are passionate about! Click the link below to see the programmes we offer!</p>
-                        <a class="btn btn-light btn-xl" href="#services">Courses</a>
-                    </div>
-                </div>
+        <!--REGISTRATION FORM-->
+        <section class="page-section" id="contact">
+            <div class="form-group" style="background:white; width:600px; margin-left:30%; padding:40px;">
+
+                <form action="postapply" method="post">
+                    <h3 class="text-black mt-0" style="text-align: center;">APPLY NOW!</h3>
+                    <br>
+                    <div class="row">
+                      <div class="col">
+                        <input type="text" class="form-control" name="fname" placeholder="First name" required>
+                      </div>
+                      <div class="col">
+                        <input type="text" name="lname" class="form-control" placeholder="Last name" require>
+                      </div>
+                    </div><br>
+
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="email" class="form-control" placeholder="Personal Email" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="phone_number" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="identification_number" class="form-control" placeholder="ID/PP Number" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="town" class="form-control" placeholder="Town" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="home_county" class="form-control" placeholder="Home County" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="postal_address" class="form-control" placeholder="Postal Address" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="postal_code" class="form-control" placeholder="Postal code" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="address" class="form-control" placeholder="Address" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="nationality" class="form-control" placeholder="Nationality" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="religion" class="form-control" placeholder="Religion" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="marital_status" class="form-control" placeholder="Marital Status" required>
+                        </div>
+                        <div class="col">
+                            <select name="course" class="form-control">
+                                <option value="">Course</option>
+                            </select>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="father_name" class="form-control" placeholder="Father Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="father_email" class="form-control" placeholder="Father Email" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="father_tel" class="form-control" placeholder="Father Tel" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="father_occupation" class="form-control" placeholder="Father Occupation" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="mother_name" class="form-control" placeholder="Mother Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="mother_email" class="form-control" placeholder="Mother Email" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="mother_tel" class="form-control" placeholder="Mother Tel" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="mother_occupation" class="form-control" placeholder="Mother Occupation" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="guardian_name" class="form-control" placeholder="Guardian Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="guardian_email" class="form-control" placeholder="Guardian Email" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="guardian_tel" class="form-control" placeholder="Guardian Tel" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="guardian_occupation" class="form-control" placeholder="Guardian Occupation" required>
+                        </div>
+                      </div><br><br>
+
+                      <input type="submit" value="APPLY" class="btn btn-primary">
+                  </form>
             </div>
         </section>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">University Highlights</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Top 5%</h3>
-                            <p class="text-muted mb-0">Our students come out as the top 5% students overal in the country!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">No. 1</h3>
-                            <p class="text-muted mb-0">Our school is the first ranked school in informatics and computer science!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">80</h3>
-                            <p class="text-muted mb-0">Nationalities are represented in the university! You will surely find someone who comes from your village!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">1st</h3>
-                            <p class="text-muted mb-0">Sporting univeristy! We are the current holders of the National University Footbal League!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio-->
-        <div id="portfolio">
-            <h2 class="text-center mt-0">Campus Life</h2>
-            <hr class="divider" />
-            <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Call to action-->
-        <section class="page-section bg-dark text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">We Are The Better Option!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Apply Now!</a>
-            </div>
-        </section>
-        <!-- Contact-->
+
+<hr style="border: 1px solid red;">
         <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -237,7 +235,7 @@
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5mb-lg-0">
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
                         <i class="bi-phone fs-2 mb-3 text-muted"></i>
                         <div>+254 729 054 607</div>
                     </div>
