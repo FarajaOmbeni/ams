@@ -26,10 +26,12 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login">AMS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Highlights</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Campus</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login">Login AMS</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +59,7 @@
                         <h2 class="text-white mt-0">We've got what you need!</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">Start learning with a course you are passionate about! Click the link below to see the programmes we offer!</p>
-                        <a class="btn btn-light btn-xl" href="#services">Courses</a>
+                        <a class="btn btn-light btn-xl" href="#about">Courses</a>
                     </div>
                 </div>
             </div>
@@ -106,56 +108,56 @@
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                        <a class="portfolio-box" href="{{ asset('/images/images.jpg') }}" title="Project Name">
+                            <img class="img-fluid" src="{{ asset('/images/images.jpg') }}" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Graduation</div>
+                                <div class="project-name">Graduate in as low as 3 Years! JOIN NOW!</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/cafeteria.jpg" title="Project Name">
+                            <img class="img-fluid" src="{{ asset('/images/cafeteria.jpg') }}" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Cafeteria</div>
+                                <div class="project-name">We have the best cooks in our cafeteria!</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/colors.jpg" title="Project Name">
+                          <img class="img-fluid" src="{{ asset('/images/colors.jpg') }}" alt="Alt Text">
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Different Colors</div>
+                                <div class="project-name">80 nationalities represented on campus</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/discussion.jpg" title="Project Name">
+                            <img class="img-fluid" src="{{ asset('/images/discussion.jpg') }}" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Friends</div>
+                                <div class="project-name">Meet new friends and thrive!</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/nagraduate.jpg" title="Project Name">
+                            <img class="img-fluid" src="{{ asset('/images/nagraduate.jpg') }}" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Graduations</div>
+                                <div class="project-name">We have had 30+ graduations on capmus</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/peers.jpg" title="Project Name">
+                            <img class="img-fluid" src="{{ asset('/images/peers.jpg') }}" alt="..." />
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Well-being</div>
+                                <div class="project-name">We care about your well-being</div>
                             </div>
                         </a>
                     </div>
@@ -920,7 +922,7 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
+  max: 100%;
   height: auto;
 }
 
@@ -11712,7 +11714,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("{{ asset('/images/banner.jpg') }}");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
