@@ -20,7 +20,7 @@
     </div>
   </header>
 
-  <div class="container_me"">
+  <div class="container_me">
     <nav>
       <div class="side_navbar">
         <a href="dashboard" class="active" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
@@ -171,7 +171,7 @@ body{
   display: flex;
   align-items: center;
 }
-.container{
+.container_me{
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
