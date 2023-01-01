@@ -41,6 +41,7 @@
             <div class="form-group" style="background:white; width:600px; margin-left:30%; padding:40px;">
 
                 <form action="postapply" method="post">
+                    @csrf
                     <h3 class="text-black mt-0" style="text-align: center;">APPLY NOW!</h3>
                     <br>
                     <div class="row">
@@ -103,7 +104,8 @@
                         </div>
                         <div class="col">
                             <select name="course" class="form-control">
-                                <option value="">Course</option>
+                                <option value="course">Course</option>
+                                <option value="course 2">Course 2</option>
                             </select>
                         </div>
                       </div><br>
@@ -146,19 +148,19 @@
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="guardian_name" class="form-control" placeholder="Guardian Name" required>
+                            <input type="text" name="guardian_name" class="form-control" placeholder="Guardian Name" >
                         </div>
                         <div class="col">
-                            <input type="text" name="guardian_email" class="form-control" placeholder="Guardian Email" required>
+                            <input type="text" name="guardian_email" class="form-control" placeholder="Guardian Email" >
                         </div>
                       </div><br>
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="guardian_tel" class="form-control" placeholder="Guardian Tel" required>
+                            <input type="text" name="guardian_tel" class="form-control" placeholder="Guardian Tel" >
                         </div>
                         <div class="col">
-                            <input type="text" name="guardian_occupation" class="form-control" placeholder="Guardian Occupation" required>
+                            <input type="text" name="guardian_occupation" class="form-control" placeholder="Guardian Occupation" >
                         </div>
                       </div><br><br>
 

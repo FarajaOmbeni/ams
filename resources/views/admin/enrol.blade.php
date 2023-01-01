@@ -33,22 +33,14 @@
     <div class="main-body">
         <table >
             <tr>
-                <th>Student ID</th>
+                <th>Application ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Tel</th>
                 <th>ID/PP Number</th>
-                <th>County</th>
-                <th>Address</th>
                 <th>Course</th>
-                <th>Parent Name</th>
-                <th>Parent Email</th>
-                <th>Parent Tel</th>
-                <th>Sponsor Name</th>
-                <th>Sponsor Email</th>
-                <th>Sponsor Tel</th>
-                <th>Enrol</th>
+                <th>Enrolled?</th>
                 <th>Edit</th>
             </tr>  
             @foreach($students as $student)
@@ -56,24 +48,23 @@
                 <td>{{$student->id}}</td>
                 <td>{{$student->fname}}</td>
                 <td>{{$student->lname}}</td>
-                <td>{{$student->email}}</td>
+                <td>{{$student->personal_email}}</td>
                 <td>{{$student->phone_number}}</td>
                 <td>{{$student->identification_number}}</td>
-                <td>{{$student->county}}</td>
-                <td>{{$student->address}}</td>
                 <td>{{$student->course}}</td>
-                <td>{{$student->parent_name}}</td>
-                <td>{{$student->parent_email}}</td>
-                <td>{{$student->parent_tel}}</td>
-                <td>{{$student->sponsor_name}}</td>
-                <td>{{$student->sponsor_email}}</td>
-                <td>{{$student->sponsor_tel}}</td>
                 <form action="enrolStudent/{{$student->id}}" method="post">
                   @csrf
                   <td><input type="hidden" name="enrol" value="1">No</td>
                 <td><input type="submit" value="Enrol" class="btn btn-primary"></td>
+
+                <input type="hidden" name="username" value="{{$student->fname}} {{$student->lname}}">
+
+                <input type="hidden" name="school_email" value="{{$student->fname}}.{{$student->lname}}@ams.com">
+                
+                <input type="hidden" name="password" value="password">
                   </form>
-            </tr>  
+            </tr> 
+            
             @endforeach
         </table> 
     </div>

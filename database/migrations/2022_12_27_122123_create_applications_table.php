@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('fname');
             $table->string('lname');
-            $table->string('personal_email');
+            $table->string('personal_email')->unique();
             $table->Integer('phone_number');
             $table->string('identification_number');
             $table->string('town');
@@ -29,6 +29,8 @@ return new class extends Migration
             $table->string('religion');
             $table->string('marital_status');
             $table->string('course');
+            $table->string('intake');
+            $table->string('dob')->nullable();
             $table->string('father_name')->nullable();
             $table->string('father_email')->nullable();
             $table->Integer('father_tel')->nullable();
