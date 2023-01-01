@@ -29,8 +29,8 @@ return new class extends Migration
             $table->string('religion');
             $table->string('marital_status');
             $table->string('course');
-            $table->string('intake');
-            $table->string('dob')->nullable();
+            $table->string('intake')->nullable();
+            $table->date('dob')->nullable();
             $table->string('father_name')->nullable();
             $table->string('father_email')->nullable();
             $table->Integer('father_tel')->nullable();

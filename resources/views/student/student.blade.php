@@ -14,7 +14,7 @@
       <span>STUDENT</span>
     </div>
     <div class="header-icons">
-      <a href="../student"><h3>HOMEPAGE</h3></a>
+      <a href="../../../student"><h3>HOMEPAGE</h3></a>
       <div class="account">
       </div>
     </div>
@@ -23,21 +23,22 @@
   <div class="container_me">
     <nav>
       <div class="side_navbar">
-        <a href="dashboard" class="active" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
-        <a href="mydetails" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
-        <a href="selfregistration" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
-        <a href="courseworkmarks" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
-        <a href="attendance" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
+        <a href="#" class="active" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
+        <a href="../../mydetails/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
+        <a href="../../selfregistration/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
+        <a href="../../courseworkmarks/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
+        <a href="../../attendance/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
       </div>
     </nav>
 
     <div class="main-body">
         <h1>STUDENT PROFILE</h1>
       <div class="promo_card">
-
+        
         <div class="picture">
         <img src="myles.jpg" width="200px" height="230px" margin-top="10px">
-          <h5>Johnson Adebayo Myles</h5>
+        
+          <h5>{{$student->fname}} {{$student->lname}}</h5>
 
         </div><br><br>
 
@@ -45,27 +46,27 @@
           <table>
             <tr>
               <td style="padding-left: 268px; background-color: lightgray;">Student No:</td>
-              <td>&emsp;1999</td>
+              <td>{{$user->id}}</td>
             </tr>
 
             <tr>
               <td style="padding-left: 285px; background-color: lightgray;">Names:</td>
-              <td>&emsp;Myles Johnson</td>
+              <td>&emsp;{{$student->fname}} {{$student->lname}}</td>
             </tr>
 
             <tr>
               <td style="padding-left: 259px; background-color: lightgray;">Date of Birth:</td>
-              <td>&emsp;20-20-2022</td>
+              <td>&emsp;{{$student->dob}}</td>
             </tr>
 
             <tr>
               <td style="padding-left: 240px; background-color: lightgray;">Mobile Number:</td>
-              <td>&emsp;+2547787767</td>
+              <td>&emsp;{{$student->phone_number}}</td>
             </tr>
 
             <tr>
               <td style="padding-left: 245px; background-color: lightgray;">Email-Address:</td>
-              <td>&emsp;mylesadebayo@gmail.com</td>
+              <td>&emsp;{{$user->email}}</td>
             </tr>
 
 
@@ -84,10 +85,11 @@
             </tr>
 
             <tr>
-              <td>Bachelor of Science in Informatics and Computer Science</td>
+              <td>{{$student->course}}</td>
               <td>Open</td>
-              <td>January 2021</td>
+              <td>{{$student->intake}}</td>
               <td>Coursework | Attendance</td>
+              
               
             </tr>
           </table><br><br><br>
@@ -95,6 +97,7 @@
 
         
       </div>
+      
     </div>
     </div>
   </div>

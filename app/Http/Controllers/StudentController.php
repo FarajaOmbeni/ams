@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Application;
+use App\Models\User;
 
 class StudentController extends Controller
 {
@@ -10,8 +12,11 @@ class StudentController extends Controller
         return view('student/studentHome');
     }
 
-    public function dashboard(){
-        return view('student/student');
+    public function dashboard($applicationid, $studentid){
+        $student=Application::findOrFail($applicationid);
+        $user=User::findOrFail($studentid);
+        
+        return view('student/student',['student'=>$student],['user'=>$user]);
     }
 
     public function mydetails(){
@@ -31,4 +36,3 @@ class StudentController extends Controller
     }
     
 }
-

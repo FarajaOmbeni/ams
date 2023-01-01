@@ -108,9 +108,9 @@
 
                       <div class="row">
                         <div class="col">
-                            <select class="form-control" name="martial_status" required>
-                                <option value="Single">Single</option>
-                                <option value="Married">Married</option>
+                            <select class="form-control" name="marital_status" required>
+                                <option name="single" value="Single">Single</option>
+                                <option name="married" value="Married">Married</option>
                                 <option value="Separated">Separated</option>
                                 <option value="Divorced">Divorced</option>
                                 <option value="Widowed">Widowed</option>
@@ -130,7 +130,9 @@
                                 <option value="" selected hidden>Course</option>
                                 @foreach ($courses as $course)
                                 <option value="{{$course->course_code}}">{{$course->course_name}}</option>
+                                
                                 @endforeach
+                                <option value="BICS">Computer Science</option>
                             </select>
                             
                         </div>

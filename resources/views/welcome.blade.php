@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="#services">Highlights</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Campus</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login">Login AMS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login">Login-AMS</a></li>
                     </ul>
                 </div>
             </div>

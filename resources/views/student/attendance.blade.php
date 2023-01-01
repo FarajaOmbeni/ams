@@ -24,11 +24,11 @@
   <div class="container_me">
     <nav>
       <div class="side_navbar">
-        <a href="dashboard" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
-        <a href="mydetails" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
-        <a href="selfregistration" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
-        <a href="courseworkmarks" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
-        <a href="attendance" class="active" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
+        <a href="../../dashboard/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
+        <a href="../../mydetails/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
+        <a href="../../selfregistration/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
+        <a href="../../courseworkmarks/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
+        <a href="#" class="active" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
       </div>
     </nav>
 
