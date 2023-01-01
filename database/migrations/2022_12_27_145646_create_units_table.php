@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('units', function (Blueprint $table) {
             $table->id();
             $table->integer('lecturer_id')->references('id')->on('users')->nullable();
-            $table->string('name')->unique();
+            $table->string('unit_name')->unique();
             $table->integer('registered_students')->unique()->nullable()->references('id')->on('users');
             $table->string('unit_code')->unique();
             $table->integer('isdeleted')->default('0');

@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
+use App\Models\Contact;
 use App\Models\Application;
 use Illuminate\Http\Request;
 
 class GeneralController extends Controller
 {
     public function apply(){
-        return view('apply');
+        $courses = Course::all();
+        return view('apply', ['courses'=>$courses]);
     }
 
     public function postApply(){
@@ -43,5 +46,18 @@ class GeneralController extends Controller
         $apply->save();
 
         return redirect('apply');
+    }
+
+    public function postContact(){
+        $message = new Contact();
+
+        $message->name = request('name');
+        $message->email = request('email');
+        $message->phone_number = request('phone_number');
+        $message->message = request('message');
+        $message->save();
+
+        return redirect()->back();
+        
     }
 }

@@ -55,12 +55,21 @@
 
                     <div class="row">
                         <div class="col">
-                            <input type="text" name="email" class="form-control" placeholder="Personal Email" required>
+                            <select name="gender" class="form-control" id="gender_select" selected>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="" selected hidden>Gender</option>
+                            </select>
+
+                            <input type="hidden" class="form-control" name="gender" id="gender_text">
+
                         </div>
                         <div class="col">
                             <input type="text" name="phone_number" class="form-control" placeholder="Phone Number" required>
                         </div>
                       </div><br>
+
+                      <input type="text" class="form-control" name="email" placeholder="Personal Email" required><br>
 
                       <div class="row">
                         <div class="col">
@@ -91,7 +100,7 @@
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="nationality" class="form-control" placeholder="Nationality" required>
+                            <input type="text" name="nationality" class="form-control" placeholder="Nationality (i.e. Kenyan)" required>
                         </div>
                         <div class="col">
                             <input type="text" name="religion" class="form-control" placeholder="Religion" required>
@@ -100,12 +109,37 @@
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="marital_status" class="form-control" placeholder="Marital Status" required>
+                            <select class="form-control" name="martial_status" required>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                                <option value="Separated">Separated</option>
+                                <option value="Divorced">Divorced</option>
+                                <option value="Widowed">Widowed</option>
+                                <option value="" hidden selected>Marital Status</option>
+                            </select>
                         </div>
                         <div class="col">
-                            <select name="course" class="form-control">
-                                <option value="course">Course</option>
-                                <option value="course 2">Course 2</option>
+                            <input type="text" onclick="(this.type='date')" name="dob" class="form-control" placeholder="Date of Birth" required>
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            
+                            <select name="course" class="form-control" required>
+                                    
+                                <option value="" selected hidden>Course</option>
+                                @foreach ($courses as $course)
+                                <option value="{{$course->course_code}}">{{$course->course_name}}</option>
+                                @endforeach
+                            </select>
+                            
+                        </div>
+                        <div class="col">
+                            <select name="intake" class="form-control" required>
+                                <option value="January">January</option>
+                                <option value="September">July</option>
+                                <option value="" selected hidden>Intake</option>
                             </select>
                         </div>
                       </div><br>
@@ -121,7 +155,7 @@
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="father_tel" class="form-control" placeholder="Father Tel" required>
+                            <input type="text" name="father_tel" class="form-control" placeholder="Father Phone Number" required>
                         </div>
                         <div class="col">
                             <input type="text" name="father_occupation" class="form-control" placeholder="Father Occupation" required>
@@ -139,7 +173,7 @@
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="mother_tel" class="form-control" placeholder="Mother Tel" required>
+                            <input type="text" name="mother_tel" class="form-control" placeholder="Mother Phone Number" required>
                         </div>
                         <div class="col">
                             <input type="text" name="mother_occupation" class="form-control" placeholder="Mother Occupation" required>
@@ -157,7 +191,7 @@
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="guardian_tel" class="form-control" placeholder="Guardian Tel" >
+                            <input type="text" name="guardian_tel" class="form-control" placeholder="Guardian Phone Number" >
                         </div>
                         <div class="col">
                             <input type="text" name="guardian_occupation" class="form-control" placeholder="Guardian Occupation" >
@@ -188,29 +222,30 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm" action="contactForm" method="post">
+                            @csrf
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" name="email" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" name="phone_number" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" name="message" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
@@ -221,9 +256,6 @@
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -232,7 +264,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                            <input type="submit" class="btn btn-primary">
                         </form>
                     </div>
                 </div>

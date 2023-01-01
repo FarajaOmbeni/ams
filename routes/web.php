@@ -34,9 +34,10 @@ Route::post('/post/{id}/edit', [FormController::class, 'editForm']);
 //Displaying all the data in a view
 Route::get('/allposts', [FormController::class, 'allposts']);
 
-//Applications
+//Applications and contact us
 Route::get('/apply', [GeneralController::class, 'apply']);
 Route::post('/postapply', [GeneralController::class, 'postApply']);
+Route::post('/contactForm', [GeneralController::class, 'postContact']);
 
 
 

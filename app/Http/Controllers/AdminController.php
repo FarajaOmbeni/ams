@@ -140,8 +140,8 @@ class AdminController extends Controller
     public function addCourse(){
         $add = new Course();
 
-        $add->course_name = request('name');
-        $add->course_code = request('code');
+        $add->course_name = request('course_name');
+        $add->course_code = request('course_code');
         $add->save();
 
         return redirect('admin/courses');
@@ -149,8 +149,8 @@ class AdminController extends Controller
     public function editCourse($id){
         $edit = new Course();
         $edit = Course::findOrFail($id);
-        $edit->course_name = request('name');
-        $edit->course_code = request('code');
+        $edit->course_name = request('course_name');
+        $edit->course_code = request('course_code');
         $edit->update();
         return redirect('admin/courses');
     }
@@ -174,7 +174,7 @@ class AdminController extends Controller
     public function addUnit(){
         $add = new Unit();
 
-        $add->name = request('name');
+        $add->unit_name = request('unit_name');
         $add->unit_code = request('unit_code');
         $add->course_code = request('course_code');
         $add->save();
@@ -184,7 +184,7 @@ class AdminController extends Controller
     public function editUnit($id){
         $edit = new unit();
         $edit = Unit::findOrFail($id);
-        $edit->name = request('name');
+        $edit->unit_name = request('unit_nmae');
         $edit->unit_code = request('unit_code');
         $edit->course_code = request('course_code');
         $edit->update();

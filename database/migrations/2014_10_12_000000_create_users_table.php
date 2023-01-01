@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->id('application_id')->references('id')->on('applications')->nullable;
+            $table->Integer('application_id')->references('id')->on('applications')->nullable();
             $table->string('name');
             $table->string('email')->unique();
             $table->string('units')->nullable();

@@ -47,8 +47,8 @@
                 <form action="addcourse" method="post">
                   @csrf
                   <div class="modal-body">
-                        <input type="text" name="code" placeholder="Course code" style="border-bottom: 1px solid" required><br><br>
-                        <input type="int" name="name" placeholder="Course name" style="border-bottom: 1px solid" required><br><br>
+                        <input type="text" name="course_code" placeholder="Course code" style="border-bottom: 1px solid" required><br><br>
+                        <input type="int" name="course_name" placeholder="Course name" style="border-bottom: 1px solid" required><br><br>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -91,9 +91,9 @@
                               @csrf
                               <div class="modal-body">
                                     <label for="name">Course Name</label><br>
-                                    <input type="text" name="name" value="{{$course->course_name}}" style="border-bottom: 1px solid" required><br><br>
+                                    <input type="text" name="course_name" value="{{$course->course_name}}" style="border-bottom: 1px solid" required><br><br>
                                     <label for="code">Course Code</label><br>
-                                    <input type="int" name="code" value="{{$course->course_code}}" style="border-bottom: 1px solid" required><br><br>
+                                    <input type="int" name="course_code" value="{{$course->course_code}}" style="border-bottom: 1px solid" required><br><br>
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

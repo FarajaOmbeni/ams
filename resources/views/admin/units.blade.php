@@ -47,7 +47,7 @@
                 <form action="addunit" method="post">
                   @csrf
                   <div class="modal-body">
-                    <input type="text" name="name" placeholder="Unit Name" style="border-bottom: 1px solid" required><br><br>
+                    <input type="text" name="unit_name" placeholder="Unit Name" style="border-bottom: 1px solid" required><br><br>
                         <input type="text" name="unit_code" placeholder="Unit Code" style="border-bottom: 1px solid" required><br><br>
                         
                         <select name="course_code" required>
@@ -100,7 +100,7 @@
                               @csrf
                               <div class="modal-body">
                                     <label for="name">Unit Name</label><br>
-                                    <input type="text" name="name" value="{{$unit->name}}" style="border-bottom: 1px solid" required><br><br>
+                                    <input type="text" name="unit_name" value="{{$unit->name}}" style="border-bottom: 1px solid" required><br><br>
                                     <label for="unit_code">Unit Code</label><br>
                                     <input type="text" name="unit_code" value="{{$unit->unit_code}}" style="border-bottom: 1px solid" required><br><br>
                                     <label for="course_code">Course Code</label><br>
