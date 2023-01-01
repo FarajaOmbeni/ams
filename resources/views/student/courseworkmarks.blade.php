@@ -44,15 +44,54 @@
               <th>Academic Year: 2022-2023 Semester: FIRST SEMESTER <th>
             </tr>
 
-          <table>
+          <table id="table">
             <tr>
               <th>Subject</th>
               <th>Mark</th>
             </tr>
 
             <tr>
+              <th>Digital Logics</th>
               <th></th>
             </tr>
+
+            <tr>
+              <td>CAT 1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CAT 2</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th>Operating Systems</th>
+              <th></th>
+            </tr>
+
+            <tr>
+              <td>CAT 1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CAT 2</td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th>IAP</th>
+              <th></th>
+            </tr>
+
+            <tr>
+              <td>CAT 1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>CAT 2</td>
+              <td></td>
+            </tr>
+
           </table>
 
         </table>

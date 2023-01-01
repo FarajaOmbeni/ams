@@ -33,9 +33,33 @@
     </nav>
 
     <div class="main-body">
-        <h1>THIS IS THE HOME PAGE</h1>
+        <h1>Class Attendance Summary</h1>
       <div class="promo_card">
-        <h1>Promo Card</h1>
+        <div class="table">
+          <table>
+            <tr>
+              <th>Subject Code</th>
+              <th>Name</th>
+              <th>Period</th>
+              <th>Lecturer</th>
+              <th>Total Hours</th>
+              <th>Absent classes</th>
+              <th>Absent Hours</th>
+              <th>Percent Absent</th>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
     </div>
@@ -169,6 +193,13 @@ nav{
 }
 .promo_card a:active{
   opacity: 0.7;
+}
+
+table,td, th{
+  border: 0.1px solid gray;
+  padding: 2px 5px;
+  border-collapse: collapse;
+  
 }
 
 </style>
