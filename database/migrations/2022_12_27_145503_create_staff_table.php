@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('county');
             $table->string('address');
             $table->string('dep_id')->references('id')->on('departments');
+            $table->string('status')->default('0');
             $table->timestamps();
         });
     }
