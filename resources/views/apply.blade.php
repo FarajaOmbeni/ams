@@ -79,7 +79,7 @@
 
                       <div class="row">
                         <div class="col">
-                          <select class="form-control" required name="town">
+                          <select class="form-control" required name="city">
                             <option value="" hidden selected>City</option>
                             <option value="baringo">Baringo</option>
                             <option value="bomet">Bomet</option>
