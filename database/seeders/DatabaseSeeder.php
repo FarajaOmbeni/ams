@@ -57,6 +57,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'lecturer',
                 'email' => 'lecturer@ams.com',
+                'role'=>'2',
                 'password' => bcrypt('lecturer123'),
             ],
             [

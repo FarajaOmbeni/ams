@@ -18,8 +18,8 @@ class ApplicationFactory extends Factory
     {
         return [
 
-            'fname' => fake()->name,
-            'lname' => fake()->name,
+            'fname' => fake()->word(),
+            'lname' => fake()->word(),
             'personal_email' =>fake()->unique()->safeEmail(),
             'phone_number'=>fake()->randomNumber(8, true),
             'identification_number'=>fake()->randomNumber(8, true),

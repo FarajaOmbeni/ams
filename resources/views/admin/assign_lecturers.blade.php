@@ -13,7 +13,7 @@
     </div>
   </header>
 
-  <div class="container_me"">
+  <div class="container_me">
     <nav>
       <div class="side_navbar">
         <a href="dashboard">Home</a>
@@ -47,13 +47,16 @@
               @endforeach
             </select><br><br><br>
 
-            <label for="classes" >Unit</label><br>
+            <label for="classes">Unit</label><br>
             <select class="form-control">
                 <option value="" selected hidden>Unit</option>
               @foreach($units as $unit)
-                <option name="unit_id" value="{{$unit->unit_code}}">{{$unit->name}}</option>
+                <option name="unit_id" value="{{$unit->unit_code}}" style="background-color: red;">{{$unit->name}}</option>
               @endforeach
             </select><br><br><br>
+            @foreach($units as $unit)
+            <p>{{$unit->name}}</p>
+            @endforeach
 
             <input type="submit" value="ASSIGN" class="btn btn-primary">
         </form>
@@ -62,5 +65,8 @@
     </div>
     </div>
   </div>
+  <style>
+    
+  </style>
 @endsection
 

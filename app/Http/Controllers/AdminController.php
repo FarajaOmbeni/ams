@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Course;
 use App\Models\Letter;
 use App\Models\Application;
+use App\Models\Lecturer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -95,6 +96,11 @@ class AdminController extends Controller
         $add->role = request('role');
         $add->password = Hash::make(request('password'));
         $add->save();
+
+        $lecturer = new Lecturer();
+        $lecturer->name = request('name');
+        $lecturer->email = request('email');
+        $lecturer->save();
 
         return redirect('admin/lecturers');
     }

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
+
     public function student(){
         return view('student/studentHome');
     }

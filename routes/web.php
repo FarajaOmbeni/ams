@@ -84,11 +84,11 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
 //<-------------------------LECTURER--------------------------------------->
 Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
     Route::get('/', [LecturerController::class,'index']);
-    Route::get('dashboard', [LecturerController::class,'dashboard']);
-    Route::get('units', [LecturerController::class,'units']);
-    Route::get('enrolled', [LecturerController::class,'enrolled']);
-    Route::get('marks', [LecturerController::class,'marks']);
-    Route::get('attendance', [LecturerController::class,'attendance']);
+    Route::get('dashboard/{lecturerid}', [LecturerController::class,'dashboard']);
+    Route::get('units/{lecturerid}', [LecturerController::class,'units']);
+    Route::get('enrolled/{lecturerid}', [LecturerController::class,'enrolled']);
+    Route::get('marks/{lecturerid}', [LecturerController::class,'marks']);
+    Route::get('attendance/{lecturerid}', [LecturerController::class,'attendance']);
     Route::post('attendance/mark', [LecturerController::class,'MarkAttendance']);
 });
 
