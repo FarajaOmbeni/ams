@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Application;
+use App\Models\Unit;
 use App\Models\User;
 use App\Models\Score;
-use App\Models\Unit;
+use App\Models\Application;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class StudentController extends Controller
 {
-    public function student($applicationid, $studentid){
+    public function student(){
         return view('student/studentHome');
     }
 

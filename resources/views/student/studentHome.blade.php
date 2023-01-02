@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 mb-5">Move to the Dashboard</p>
-                    <a class="btn btn-primary btn-xl" href="student/dashboard">Dashboard</a>
+                    <a class="btn btn-primary btn-xl" href="student/dashboard/{{Auth::user()->application_id}}/{{Auth::user()->id}}">Dashboard</a>
                 </div>
             </div>
         </div>
