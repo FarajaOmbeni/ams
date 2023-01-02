@@ -13,19 +13,20 @@
     </div>
   </header>
 
-  <div class="container_me"">
+  <div class="container_me">
     <nav>
       <div class="side_navbar">
         <a href="dashboard">Home</a>
         <a href="accept">Acceptance Letter</a>
         <a href="enrol">Enrol Students</a>
         <a href="lecturers">Lecturers</a>
+        <a href="registration_requests">Students</a>
         <a href="courses">Courses</a>
         <a href="units">Units</a>
         <a href="rooms">Rooms</a>
-        <a href="registration_requests">Send Registration Requests</a>
+
         <a class="active" href="#">Assign Lecturers</a>
-        <a href="timetable">Timetable</a>
+        
       </div>
     </nav>
 
@@ -35,23 +36,24 @@
         <h1>Assign Lecturers</h1> <br><br>
         @foreach($units as $unit)
         @foreach($lecturers as $lecturer)
-        <form class="form-group" action="assign/lec_id={{$lecturer->id}}/unit_id={{$unit->id}}" method="post">
+        <form class="form-group" action="assign/{{$lecturer->id}}" method="post">
           @csrf
           @endforeach
           @endforeach
             <label for="lecturers" >Lecturer</label><br>
-            <select class="form-control">
+            <select class="form-control" name="lecturer_id">
                 <option value="" selected hidden>Lecturer</option>
               @foreach($lecturers as $lecturer)
                 <option name="lecturer_id" value="{{$lecturer->id}}">{{$lecturer->name}}</option>
-              @endforeach
+                @endforeach
             </select><br><br><br>
+            
 
-            <label for="classes" >Unit</label><br>
-            <select class="form-control">
+            <label for="classes">Unit</label><br>
+            <select class="form-control" name="unit_id">
                 <option value="" selected hidden>Unit</option>
               @foreach($units as $unit)
-                <option name="unit_id" value="{{$unit->unit_code}}">{{$unit->name}}</option>
+                <option name="unit_id" value="{{$unit->id}}">{{$unit->unit_name}}</option>
               @endforeach
             </select><br><br><br>
 
@@ -62,5 +64,8 @@
     </div>
     </div>
   </div>
+  <style>
+    
+  </style>
 @endsection
 

@@ -24,10 +24,10 @@
     <nav>
       <div class="side_navbar">
         <a href="#" class="active" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
-        <a href="../../mydetails/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
-        <a href="../../selfregistration/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
-        <a href="../../courseworkmarks/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
-        <a href="../../attendance/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
+        <a href="../../mydetails/{{Auth::user()->application_id}}/{{Auth::user()->id}}" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
+        
+        <a href="../../courseworkmarks/{{Auth::user()->application_id}}/{{Auth::user()->id}}/{{Auth::user()->course_code}}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
+        <a href="../../attendance/{{Auth::user()->application_id}}/{{Auth::user()->id}}" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
       </div>
     </nav>
 
@@ -36,7 +36,7 @@
       <div class="promo_card">
         
         <div class="picture">
-        <img src="myles.jpg" width="200px" height="230px" margin-top="10px">
+        <img src="myles.jpg" width="200px" height="230px" margin-top="10px" >
         
           <h5>{{$student->fname}} {{$student->lname}}</h5>
 
@@ -46,11 +46,11 @@
           <table>
             <tr>
               <td style="padding-left: 268px; background-color: lightgray;">Student No:</td>
-              <td>{{$user->id}}</td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;{{$user->id}}</td>
             </tr>
 
             <tr>
-              <td style="padding-left: 285px; background-color: lightgray;">Names:</td>
+              <td style="padding-left: 308px; background-color: lightgray;">Names:</td>
               <td>&emsp;{{$student->fname}} {{$student->lname}}</td>
             </tr>
 
@@ -72,7 +72,7 @@
 
             
           </table>
-        </div><br><br><br><br><br><br><br><br><br><br>
+        </div><br><br><br><br><br><br>
 
         <div class="programs">
           <h4>Academic Programmes</h4><br>
@@ -86,7 +86,7 @@
 
             <tr>
               <td>{{$student->course}}</td>
-              <td>Open</td>
+              <td>{{$user->status}}</td>
               <td>{{$student->intake}}</td>
               <td>Coursework | Attendance</td>
               
@@ -110,6 +110,7 @@
   width: 200px;
   height: 230px;
   margin-top: 50px;
+  margin-left:50px;
   border-radius: 8px;
   background-size: contain;
   background-color: gray;
@@ -117,7 +118,7 @@
 .details{
   width: 600px;
   margin-left:20%;
-  margin-top:-23.6%
+  margin-top:-18.6%
 }
 table,td, th{
   border: 0.1px solid gray;
@@ -140,6 +141,7 @@ th{
   text-decoration: none;
   box-sizing: border-box;
   font-family: serif;
+  font-size: 18px;
 }
 p{
   font-family: serif;
@@ -227,6 +229,7 @@ nav{
   width: 100%;
   height: 70vh;
   margin-top: 10px;
+  margin-left: -90px;
   border-radius: 8px;
   padding: 0.5rem 1rem 1rem 3rem;
   background-size: contain;

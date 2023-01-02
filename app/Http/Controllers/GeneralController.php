@@ -22,8 +22,8 @@ class GeneralController extends Controller
         $apply->personal_email = request('email');
         $apply->phone_number = request('phone_number');
         $apply->identification_number = request('identification_number');
-        $apply->town = request('town');
-        $apply->home_county = request('home_county');
+        $apply->city = request('city');
+        $apply->gender = request('gender');
         $apply->postal_address = request('postal_address');
         $apply->postal_code = request('postal_code');
         $apply->nationality = request('nationality');

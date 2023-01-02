@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('unit_name')->unique();
             $table->integer('registered_students')->unique()->nullable()->references('id')->on('users');
             $table->string('unit_code')->unique();
+            $table->integer('academic_year');
             $table->integer('isdeleted')->default('0');
             $table->string('course_code')->references('course_code')->on('courses');
             $table->timestamps();

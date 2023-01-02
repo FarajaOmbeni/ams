@@ -17,31 +17,31 @@ class LecturerController extends Controller
 
     }
 
-    public function dashboard(){
+    public function dashboard($lecturerid){
         return view('lecturer/lecturer');
 
     }
 
-    public function units(){
-        // $units = Unit::where('unit_code','ICS2205')->get();
-        $units = Unit::all();
+    public function units($lecturerid){
+         $units = Unit::where('lecturer_id', $lecturerid)->get();
+        //$units = Unit::all();
         return view('lecturer/units',['units'=>$units]);
 
     }
 
-    public function enrolled($id){
+    public function enrolled($lecturerid){
         $units = Unit::where('lecturer_id',$id)->get();
         return view('lecturer/enrolled',['units'=>$units]);
 
     }
 
-    public function marks(){
+    public function marks($lecturerid){
         $marks = Score::all();
         return view('lecturer/marks',['marks'=>$marks]);
 
     }
 
-    public function attendance(){
+    public function attendance($lecturerid){
         $attendance = Attendance::all();
         return view('lecturer/attendance',['attendance'=>$attendance]);
 
@@ -60,7 +60,21 @@ class LecturerController extends Controller
         $attend->unit_code=request('unit_code');
         $attend->save();
 
-        return redirect('lecturer/attendance');
+        return redirect('lecturer/attendance/{lectuerid}');
+        
+    }
+
+    public function MarkStudent(){
+        
+        $attend=new Attendance();
+        $attend->description=request('description');
+        $attend->score=request('score');
+        $attend->outOf=request('outOf');
+        $attend->student_id=request('student_id');
+        $attend->unit_id=request('unit_code');
+        $attend->save();
+
+        return redirect('lecturer/attendance/{lectuerid}');
         
     }
 

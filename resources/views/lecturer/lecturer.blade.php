@@ -15,20 +15,20 @@
     </div>
     <div class="header-icons">
       <div class="account">
-        <a href="../lecturer"><h4>Homepage</h4></a>
+        <a href="../../lecturer"><h4>Homepage</h4></a>
         <h4>Lecturer Name</h4>
       </div>
     </div>
   </header>
 
-  <div class="container_me"">
+  <div class="container_me">
     <nav>
       <div class="side_navbar">
-        <a class="active" href="dashboard">Home</a>
-        <a href="units">Course Units</a>
-        <a href="enrolled">Students enrolled</a>
-        <a href="marks">Coursework Marks</a>
-        <a href="attendance">Attendance</a>
+        <a class="active" href="#">Home</a>
+        <a href="../units/{{Auth::user()->id}}">Course Units</a>
+        <a href="../enrolled/{{Auth::user()->id}}">Students enrolled</a>
+        <a href="../marks/{{Auth::user()->id}}">Coursework Marks</a>
+        <a href="../attendance/{{Auth::user()->id}}">Attendance</a>
       </div>
     </nav>
 

@@ -53,11 +53,12 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
     Route::post('sendLetter', [AdminController::class, 'acceptLetter']);
     //registration requests
     Route::get('registration_requests', [AdminController::class,'registration_requests']);
+    Route::post('sendrequest/{id}', [AdminController::class, 'sendRequest']);
     //lecturers
     Route::get('assign_lecturers', [AdminController::class,'assign_lecturers']);
     Route::get('lecturers', [AdminController::class, 'lecturers']);
     Route::post('addlecturer', [AdminController::class, 'addLecturers']);
-    Route::post('assign/lec_id={lec_id}/unit_id={unit_id}', [AdminController::class, 'assign']);
+    Route::post('assign/{lecid}', [AdminController::class, 'assign']);
 
     //rooms
     Route::get('rooms', [AdminController::class, 'rooms']);
@@ -84,12 +85,13 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
 //<-------------------------LECTURER--------------------------------------->
 Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
     Route::get('/', [LecturerController::class,'index']);
-    Route::get('dashboard', [LecturerController::class,'dashboard']);
-    Route::get('units', [LecturerController::class,'units']);
-    Route::get('enrolled', [LecturerController::class,'enrolled']);
-    Route::get('marks', [LecturerController::class,'marks']);
-    Route::get('attendance', [LecturerController::class,'attendance']);
-    Route::post('attendance/mark', [LecturerController::class,'MarkAttendance']);
+    Route::get('dashboard/{lecturerid}', [LecturerController::class,'dashboard']);
+    Route::get('units/{lecturerid}', [LecturerController::class,'units']);
+    Route::get('enrolled/{lecturerid}', [LecturerController::class,'enrolled']);
+    Route::get('marks/{lecturerid}', [LecturerController::class,'marks']);
+    Route::get('attendance/{lecturerid}', [LecturerController::class,'attendance']);
+    Route::post('attendance/{lecturerid}/mark', [LecturerController::class,'MarkAttendance']);
+    Route::post('marks/{lecturerid}/grade', [LecturerController::class, 'MarkStudent']);
 });
 
 
@@ -104,7 +106,7 @@ Route::prefix('student')->middleware('auth')->group(function(){
         Route::get('dashboard/{applicationid}/{studentid}', [StudentController::class,'dashboard']);
         Route::get('mydetails/{applicationid}/{studentid}', [StudentController::class, 'mydetails']);
         Route::get('selfregistration/{applicationid}/{studentid}', [StudentController::class, 'selfregistration']);
-        Route::get('courseworkmarks/{applicationid}/{studentid}', [StudentController::class, 'courseworkmarks']);
+        Route::get('courseworkmarks/{applicationid}/{studentid}/{coursecode}', [StudentController::class, 'courseworkmarks']);
         Route::get('attendance/{applicationid}/{studentid}', [StudentController::class, 'attendance']);
         
 });

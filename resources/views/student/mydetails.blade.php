@@ -24,11 +24,11 @@
   <div class="container_me">
     <nav>
       <div class="side_navbar">
-      <a href="../../dashboard/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
+      <a href="../../dashboard/{{Auth::user()->application_id}}/{{Auth::user()->id}}" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
         <a href="#" class="active" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
-        <a href="../../selfregistration/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
-        <a href="../../courseworkmarks/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
-        <a href="../../attendance/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
+        registration_requests
+        <a href="../../courseworkmarks/{{Auth::user()->application_id}}/{{Auth::user()->id}}/{{Auth::user()->course_code}}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
+        <a href="../../attendance/{{Auth::user()->application_id}}/{{Auth::user()->id}}" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
       </div>
     </nav>
 
@@ -51,48 +51,36 @@
 
             <div class="pd1">
               <label for="ID">ID/Passport Number:</label>
-              <input type="text" name="id" Placeholder="id" style="margin-left:33px;"><br><br>
+              <input type="text" name="id" value="{{$student->identification_number}}" style="margin-left:33px;" readonly><br><br>
 
               <label for="postal-address">Postal Address:</label>
-              <input type="text" name="postal-address" placeholder="Postal-address" style="margin-left: 70px"><br><br>
+              <input type="text" name="postal-address" value="{{$student->postal_address}}" style="margin-left: 70px" readonly><br><br>
 
-              <label for="town">Town:</label>
-              <input type="text" name="town" placeholder="Town" style="margin-left: 129px"><br><br>
+              <label for="town">City:</label>
+              <input type="text" name="town" value="{{$student->town}}" style="margin-left: 137px" readonly><br><br>
 
-              <label for="home-country">Home County:</label>
-              <select name="home-county" id="home-county" style="margin-left: 75px">
-                <option value="embu">Embu</option>
-                <option value="foreigner">Foreigner</option>
-                <option value="busia">Busia</option>
-              </select><br><br>
+              <label for="nationality">Nationality:</label>
+              <input type="text" name="nationality" value="{{$student->nationality}}" style="margin-left: 93px" readonly><br><br>
               
               <label for="residence">Residence:</label>
-              <input type="text" name="residence" placeholder="residence" style="margin-left: 98px">
+              <input type="text" name="residence" value="{{$student->address}}" style="margin-left: 100px" readonly>
             </div>
 
             <div class="pd2">
               <label for="religion">Religion</label>
-              <select name="religion" id="religion" style="margin-left: 109px">
-                <option value="christian">Christian</option>
-                <option value="muslim">Muslim</option>
-                <option value="hindu">Hindu</option>
-              </select><br><br>
+              <input name="religion" value="{{$student->religion}}" style="margin-left: 109px" readonly><br><br>
 
               <label for="postal-code">Postal Code:</label>
-              <input type="text" name="postal-code" placeholder="Postal-code" style="margin-left: 83px"><br><br>
+              <input type="text" name="postal-code" value="{{$student->postal_code}}" readonly style="margin-left: 83px"><br><br>
 
               <label for="marital-status">Marital Status:</label>
-              <select name="marital-status" id="marital-status" style="margin-left: 70px">
-                <option value="single">Single</option>
-                <option value="married">Married</option>
-                <option value="divorced">Divorced</option>
-              </select><br><br>
+              <input name="marital-status" id="marital-status" value="{{$student->marital_status}}" readonly style="margin-left: 70px"><br><br>
 
               <label for="mobile-number">Mobile Number:</label>
-              <input type="text" name="mobile-number" placeholder="Mobile Number" style="margin-left: 58px"><br><br>
+              <input type="text" name="mobile-number" value="{{$student->phone_number}}" readonly style="margin-left: 58px"><br><br>
 
               <label for="personal-email">Personal Email:</label>
-              <input type="email" name="personal-email" placeholder="Email" style="margin-left: 62px">
+              <input type="email" name="personal-email" value="{{$student->email}}" readonly style="margin-left: 62px">
 
 
             </div>
@@ -104,49 +92,48 @@
 
             <div class="pd1">
               <label for="father">Father's Name:</label>
-              <input type="text" name="father" Placeholder="Father's Name" style="margin-left:110px;"><br><br>
+              <input type="text" name="father" value="{{$student->father_name}}" readonly style="margin-left:110px;"><br><br>
 
               <label for="father-mobile">Father's Mobile Number:</label>
-              <input type="text" name="father-mobile" placeholder="Father's Mobile" style="margin-left: 46px"><br><br>
+              <input type="text" name="father-mobile" value="{{$student->father_tel}}" readonly style="margin-left: 46px"><br><br>
 
               <label for="mother">Mother's Name:</label>
-              <input type="text" name="mother" placeholder="Mother's Name" style="margin-left: 104px"><br><br>
+              <input type="text" name="mother" value="{{$student->mother_name}}" readonly style="margin-left: 104px"><br><br>
 
               <label for="mother-mobile">Mother's Mobile Number:</label>
-              <input type="text" name="mother-mobile" placeholder="Mother's Mobile" style="margin-left: 39px"><br><br>
+              <input type="text" name="mother-mobile" value="{{$student->mother_tel}}" readonly style="margin-left: 39px"><br><br>
               
               <label for="guardian">Guardian's Name:</label>
-              <input type="text" name="guardian" placeholder="Guardian's Name" style="margin-left: 90px"><br><br>
+              <input type="text" name="guardian" value="{{$student->guardian_name}}" readonly style="margin-left: 90px"><br><br>
 
               <label for="guardian-mobile">Guardian's Mobile Number:</label>
-              <input type="text" name="guardian-mobile" placeholder="Guardian's Mobile" style="margin-left: 26px">
+              <input type="text" name="guardian-mobile" value="{{$student->guardian_tel}}" readonly style="margin-left: 26px">
             </div>
 
             <div class="pd2">
               <label for="father-email">Father's Email:</label>
-              <input type="text" name="father-email" Placeholder="Father's Email" style="margin-left:93px;"><br><br>
+              <input type="text" name="father-email" value="{{$student->father_email}}" readonly style="margin-left:93px;"><br><br>
 
               <label for="father-occupation">Father's Occupation:</label>
-              <input type="text" name="father-occupation" placeholder="Father's Occupation" style="margin-left: 55px"><br><br>
+              <input type="text" name="father-occupation" value="{{$student->father_occupation}}" readonly style="margin-left: 55px"><br><br>
 
               <label for="mother-email">Mother's Email:</label>
-              <input type="text" name="mother-email" placeholder="Mother's Email" style="margin-left: 84px"><br><br>
+              <input type="text" name="mother-email" value="{{$student->mother_email}}" readonly style="margin-left: 84px"><br><br>
 
               <label for="mother-occupation">Mother's Occupation:</label>
-              <input type="text" name="mother-occupation" placeholder="Mother's Occupation" style="margin-left: 48px"><br><br>
+              <input type="text" name="mother-occupation" value="{{$student->mother_occupation}}" readonly style="margin-left: 48px"><br><br>
               
               <label for="guardian-email">Guardian's Email:</label>
-              <input type="text" name="guardian-email" placeholder="Guardian's Email" style="margin-left: 71px"><br><br>
+              <input type="text" name="guardian-email" value="{{$student->guardian_email}}" readonly style="margin-left: 71px"><br><br>
 
               <label for="guardian-occupation">Guardian's Occupation:</label>
-              <input type="text" name="guardian-occupation" placeholder="Guardian's Occupation" style="margin-left: 35px">
+              <input type="text" name="guardian-occupation" value="{{$student->guardian_occupation}}" readonly style="margin-left: 35px">
 
 
             </div>
 
             </div><br>
 
-            <input type="submit" value="Save" name="save"><br>
 
           
 
@@ -222,7 +209,7 @@ nav{
   padding: 1px;
   display: flex;
   flex-direction: column;
-  height: 130vh;
+  height: 100vh;
   background:white;
 }
 .side_navbar span{
@@ -257,7 +244,7 @@ nav{
 .promo_card{
   background-color: white;
   width: 100%;
-  height: 130vh;
+  height: 100vh;
   margin-top: 10px;
   border-radius: 8px;
   padding: 0.5rem 1rem;

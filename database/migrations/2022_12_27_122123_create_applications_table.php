@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('personal_email')->unique();
             $table->Integer('phone_number');
             $table->string('identification_number');
-            $table->string('town');
-            $table->string('home_county');
+            $table->string('city');
+            $table->string('gender');
             $table->string('postal_address');
             $table->string('postal_code');
             $table->string('nationality');
