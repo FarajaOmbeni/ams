@@ -385,7 +385,7 @@
                         <div class="col">
                             <select name="intake" class="form-control" required>
                                 <option value="January">January</option>
-                                <option value="September">July</option>
+                                <option value="July">July</option>
                                 <option value="" selected hidden>Intake</option>
                             </select>
                         </div>

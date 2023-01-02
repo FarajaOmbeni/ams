@@ -24,7 +24,7 @@ class AdminController extends Controller
     }
 
     public function enrol(){
-        $students = Application::where('enrolled','0')->orderby('personal_email','asc')->get();
+        $students = Application::where('enrolled','0')->get();
 
         return view('admin/enrol',['students'=>$students]);}
 
@@ -92,6 +92,7 @@ class AdminController extends Controller
         $user->application_id = $id;
         $user->name = request('username');
         $user->email = request('school_email');
+        $user->course_code = request('course_code');
         $user->password = Hash::make(request('password'));
         $user->save();
 

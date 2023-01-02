@@ -26,7 +26,7 @@
         <a class="active" href="#">Rooms</a>
 
         
-        <a href="timetable">Timetable</a>
+        
       </div>
     </nav>
 

@@ -27,7 +27,7 @@
         <a href=".../dashboard/{{Auth::user()->id}}">Home</a>
         <a href="../units/{{Auth::user()->id}}">Course Units</a>
         <a href="../enrolled/{{Auth::user()->id}}">Students enrolled</a>
-        <a class = "../active/{{Auth::user()->id}}" href="#">Coursework Marks</a>
+        <a class = "active" href="#">Coursework Marks</a>
         <a href="../attendance/{{Auth::user()->id}}">Attendance</a>
       </div>
     </nav>
@@ -47,13 +47,14 @@
 
         <div class="detailsform">
           <h4>Coursework marks</h4><br>
-          <form>
-            
+          
+            <form action="{{Auth::user()->id}}/grade" method="post">
             <div class="pd-parent">
 
-          <form action="{{Auth::user()->id}}/grade" method="post">
-            @csrf
+          
             <div class="pd1">
+              
+                @csrf
               <label for="description">Description:</label>
               <input type="text" name="description" Placeholder="description" style="margin-left:27px;"><br><br>
 
@@ -73,10 +74,11 @@
               <input type="text" name="unit_code" placeholder="unit_code" style="margin-left: 40px"><br><br>
 
               <input type="submit" name="SUBMIT">
+            </form>
 
 
             </div>
-          </form>
+         
 
             </div>
 

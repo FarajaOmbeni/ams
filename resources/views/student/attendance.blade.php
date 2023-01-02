@@ -15,7 +15,7 @@
       <span>STUDENT</span>
     </div>
     <div class="header-icons">
-      <a href="../student"><h3>HOMEPAGE</h3></a>
+      <a href="../../../student"><h3>HOMEPAGE</h3></a>
       <div class="account">
       </div>
     </div>
@@ -26,7 +26,6 @@
       <div class="side_navbar">
         <a href="../../dashboard/{{Auth::user()->application_id}}/{{Auth::user()->id}}" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
         <a href="../../mydetails/{{Auth::user()->application_id}}/{{Auth::user()->id}}" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
-        registration_requests
         <a href="../../courseworkmarks/{{Auth::user()->application_id}}/{{Auth::user()->id}}/{{Auth::user()->course_code}}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
         <a href="#" class="active" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
       </div>

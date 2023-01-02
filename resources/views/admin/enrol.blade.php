@@ -27,7 +27,7 @@
         <a href="rooms">Rooms</a>
 
         
-        <a href="timetable">Timetable</a>
+        
       </div>
     </nav>
 
@@ -61,6 +61,8 @@
                 <input type="hidden" name="username" value="{{$student->fname}} {{$student->lname}}">
 
                 <input type="hidden" name="school_email" value="{{$student->fname}}.{{$student->lname}}@ams.com">
+
+                <input type="hidden" name="course_code" value="{{$student->course}}">
                 
                 <input type="hidden" name="password" value="password">
                   </form>

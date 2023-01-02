@@ -31,6 +31,7 @@ class GeneralController extends Controller
         $apply->religion = request('religion');
         $apply->marital_status = request('marital_status');
         $apply->course = request('course');
+        $apply->intake = request('intake');
         $apply->father_name = request('father_name');
         $apply->father_email = request('father_email');
         $apply->father_tel = request('father_tel');

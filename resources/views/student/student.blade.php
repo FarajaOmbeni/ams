@@ -117,8 +117,8 @@
 }
 .details{
   width: 600px;
-  margin-left:20%;
-  margin-top:-18.6%
+  margin-left:40%;
+  margin-top:-27%
 }
 table,td, th{
   border: 0.1px solid gray;
@@ -229,7 +229,7 @@ nav{
   width: 100%;
   height: 70vh;
   margin-top: 10px;
-  margin-left: -90px;
+  margin-left: -20px;
   border-radius: 8px;
   padding: 0.5rem 1rem 1rem 3rem;
   background-size: contain;

@@ -66,15 +66,15 @@ class LecturerController extends Controller
 
     public function MarkStudent(){
         
-        $attend=new Attendance();
-        $attend->description=request('description');
-        $attend->score=request('score');
-        $attend->outOf=request('outOf');
-        $attend->student_id=request('student_id');
-        $attend->unit_id=request('unit_code');
-        $attend->save();
+        $score=new Score();
+        $score->description=request('description');
+        $score->score=request('score');
+        $score->outOf=request('outOf');
+        $score->student_id=request('student_id');
+        $score->unit_code=request('unit_code');
+        $score->save();
 
-        return redirect('lecturer/attendance/{lectuerid}');
+        return redirect('lecturer/marks/{lectuerid}');
         
     }
 

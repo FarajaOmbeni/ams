@@ -41,7 +41,7 @@ class StudentController extends Controller
         //$user=User::findOrFail($studentid);
         $score= Score::where('student_id',$studentid)->get();
        //$course=Course::where('coursecode',$coursecode);
-        $units=Unit::where('course_code',$coursecode)->get();
+        $units=Unit::where('course_code',$coursecode)->where('academic_year',Auth::user()->academic_year)->get();
         return view('student/courseworkmarks',['score'=>$score], ['units'=>$units]);
 
     }
