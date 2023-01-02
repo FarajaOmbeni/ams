@@ -44,7 +44,7 @@
 
           <table id="table">
           @foreach($units as $unit)
-          @foreach($score as $singleScore)
+          
             <tr>
               <th>Subject</th>
               <th>Mark</th>
@@ -56,8 +56,8 @@
               <th>{{$unit->unit_name}}</th>
               
             </tr>
-            
-            @if($unit->unit_code==$score->unit_code)
+            @foreach($score as $singleScore)
+            @if($unit->unit_code==$singleScore->unit_code)
             <tr>
               <td>{{$singleScore->description}}</td>
               <td>{{$singleScore->score}}/{{$singleScore->outOf}}</td>

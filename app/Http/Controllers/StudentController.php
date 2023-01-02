@@ -11,7 +11,7 @@ use App\Models\Unit;
 
 class StudentController extends Controller
 {
-    public function student(){
+    public function student($applicationid, $studentid){
         return view('student/studentHome');
     }
 
@@ -36,7 +36,7 @@ class StudentController extends Controller
 
     public function courseworkmarks($applicationid, $studentid, $coursecode){
         //$student=Application::findOrFail($applicationid);
-        $user=User::findOrFail($studentid);
+        //$user=User::findOrFail($studentid);
         $score= Score::where('student_id',$studentid)->get();
        //$course=Course::where('coursecode',$coursecode);
         $units=Unit::where('course_code',$coursecode)->get();
