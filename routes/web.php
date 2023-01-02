@@ -104,7 +104,7 @@ Route::prefix('student')->middleware('auth')->group(function(){
         Route::get('dashboard/{applicationid}/{studentid}', [StudentController::class,'dashboard']);
         Route::get('mydetails/{applicationid}/{studentid}', [StudentController::class, 'mydetails']);
         Route::get('selfregistration/{applicationid}/{studentid}', [StudentController::class, 'selfregistration']);
-        Route::get('courseworkmarks/{applicationid}/{studentid}', [StudentController::class, 'courseworkmarks']);
+        Route::get('courseworkmarks/{applicationid}/{studentid}/{coursecode}', [StudentController::class, 'courseworkmarks']);
         Route::get('attendance/{applicationid}/{studentid}', [StudentController::class, 'attendance']);
         
 });

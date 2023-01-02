@@ -26,7 +26,7 @@
         <a href="#" class="active" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
         <a href="../../mydetails/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
         <a href="../../selfregistration/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
-        <a href="../../courseworkmarks/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
+        <a href="../../courseworkmarks/{applicationid}/{studentid}/{{$user->course_code}}" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
         <a href="../../attendance/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
       </div>
     </nav>

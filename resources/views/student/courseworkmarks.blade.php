@@ -24,11 +24,11 @@
   <div class="container_me">
     <nav>
       <div class="side_navbar">
-      <a href="../../dashboard/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
-        <a href="../../mydetails/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
-        <a href="../../selfregistration/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
+      <a href="../../../dashboard/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-house"></i>  Home Page</a>
+        <a href="../../../mydetails/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-circle-info"></i>  My Details</a>
+        <a href="../../../selfregistration/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-address-card"></i>  Self-Registration</a>
         <a href="#" class="active" class="text-decoration-none"><i class="fa-solid fa-marker"></i>  Coursework Marks</a>
-        <a href="../../attendance/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
+        <a href="../../../attendance/{applicationid}/{studentid}" class="text-decoration-none"><i class="fa-solid fa-clipboard-user"></i>  Attendance</a>
       </div>
     </nav>
 
@@ -36,8 +36,6 @@
         <h1>Coursework Marks</h1>
 
       <div class="promo_card">
-        <h1>Promo Card</h1>
-
       <div class="table">
         <table>
             <tr>
@@ -45,53 +43,29 @@
             </tr>
 
           <table id="table">
+          @foreach($units as $unit)
+          @foreach($score as $singleScore)
             <tr>
               <th>Subject</th>
               <th>Mark</th>
             </tr>
 
+            
             <tr>
-              <th>Digital Logics</th>
-              <th></th>
+              
+              <th>{{$unit->unit_name}}</th>
+              
             </tr>
-
+            
+            @if($unit->unit_code==$score->unit_code)
             <tr>
-              <td>CAT 1</td>
-              <td></td>
+              <td>{{$singleScore->description}}</td>
+              <td>{{$singleScore->score}}/{{$singleScore->outOf}}</td>
             </tr>
-            <tr>
-              <td>CAT 2</td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <th>Operating Systems</th>
-              <th></th>
-            </tr>
-
-            <tr>
-              <td>CAT 1</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>CAT 2</td>
-              <td></td>
-            </tr>
-
-            <tr>
-              <th>IAP</th>
-              <th></th>
-            </tr>
-
-            <tr>
-              <td>CAT 1</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>CAT 2</td>
-              <td></td>
-            </tr>
-
+            @endif
+            
+            @endforeach
+            @endforeach
           </table>
 
         </table>
