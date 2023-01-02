@@ -20,11 +20,12 @@
         <a href="accept">Acceptance Letter</a>
         <a href="enrol">Enrol Students</a>
         <a href="lecturers">Lecturers</a>
+        <a href="registration_requests">Students</a>
         <a href="courses">Courses</a>
         <a href="#" class="active">Units</a>
         <a href="rooms">Rooms</a>
-        <a href="registration_requests">Send Registration Requests</a>
-        <a href="assign_lecturers">Assign Lecturers</a>
+
+        
         <a href="timetable">Timetable</a>
       </div>
     </nav>
@@ -49,12 +50,18 @@
                   <div class="modal-body">
                     <input type="text" name="unit_name" placeholder="Unit Name" style="border-bottom: 1px solid" required><br><br>
                         <input type="text" name="unit_code" placeholder="Unit Code" style="border-bottom: 1px solid" required><br><br>
+
+                        <input type="text" name="academic_year" placeholder="Academic Year" style="border-bottom: 1px solid" required><br><br>
+
+                        <input type="text" name="lectuer_id" placeholder="Lecturer" style="border-bottom: 1px solid" required> <br><br>
                         
+
                         <select name="course_code" required>
                             @foreach ($courses as $course)
                             <option value="{{$course->course_code}}">{{$course->course_code}}</option>
                             @endforeach
                         </select>
+
                         
                   </div>
                   <div class="modal-footer">
@@ -72,14 +79,16 @@
                 <th>Unit Name</th>
                 <th>unit Code</th>
                 <th>Course code</th>
+                <th>Academic Year</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>  
             @foreach($units as $unit)
             <tr>
-                <td>{{$unit->name}}</td>
+                <td>{{$unit->unit_name}}</td>
                 <td>{{$unit->unit_code}}</td>
                 <td>{{$unit->course_code}}</td>
+                <td>{{$unit->academic_year}}</td>
                 <form action="units/{{$unit->id}}" method="post">
                   @csrf
                   <td>
@@ -100,11 +109,14 @@
                               @csrf
                               <div class="modal-body">
                                     <label for="name">Unit Name</label><br>
-                                    <input type="text" name="unit_name" value="{{$unit->name}}" style="border-bottom: 1px solid" required><br><br>
+                                    <input type="text" name="unit_name" value="{{$unit->unit_name}}" style="border-bottom: 1px solid" required><br><br>
                                     <label for="unit_code">Unit Code</label><br>
                                     <input type="text" name="unit_code" value="{{$unit->unit_code}}" style="border-bottom: 1px solid" required><br><br>
                                     <label for="course_code">Course Code</label><br>
                                     <input type="int" name="course_code" value="{{$unit->course_code}}" style="border-bottom: 1px solid" required><br><br>
+                                    
+                                    <label for="lecturer_id">Lecturer</label><br>
+                                    <input type="text" name="lecturer_id" value="{{$unit->lecturer_id}}" style="border-bottom: 1px solid" required>
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -38,13 +38,13 @@
        <h1>COURSE UNITS!</h1>
        <table>
        <tr>
-        <th>course name</th>
-        <th>course code</th>
+        <th>Unit name</th>
+        <th>Course code</th>
         <th>unit code</th>
        </tr>
        @foreach($units as $unit)
         <tr>
-            <td>{{$unit->name}}</td>
+            <td>{{$unit->unit_name}}</td>
             <td>{{$unit->course_code}}</td>
             <td>{{$unit->unit_code}}</td>
         </tr>

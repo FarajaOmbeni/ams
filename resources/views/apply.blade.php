@@ -376,7 +376,7 @@
                                     
                                 <option value="" selected hidden>Course</option>
                                 @foreach ($courses as $course)
-                                <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                                <option value="{{$course->course_code}}">{{$course->course_name}}</option>
                                 
                                 @endforeach
                             </select>

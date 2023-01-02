@@ -60,7 +60,21 @@ class LecturerController extends Controller
         $attend->unit_code=request('unit_code');
         $attend->save();
 
-        return redirect('lecturer/attendance');
+        return redirect('lecturer/attendance/{lectuerid}');
+        
+    }
+
+    public function MarkStudent(){
+        
+        $attend=new Attendance();
+        $attend->description=request('description');
+        $attend->score=request('score');
+        $attend->outOf=request('outOf');
+        $attend->student_id=request('student_id');
+        $attend->unit_id=request('unit_code');
+        $attend->save();
+
+        return redirect('lecturer/attendance/{lectuerid}');
         
     }
 

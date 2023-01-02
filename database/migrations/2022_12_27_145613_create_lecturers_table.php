@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('nationality')->nullable();
             $table->string('county')->nullable();
             $table->string('address')->nullable();
-            $table->string('unit')->referecens('name')->on('unit');
+            $table->string('unit')->referecens('name')->on('unit')->nullable();
             $table->timestamps();
         });
     }

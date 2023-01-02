@@ -47,7 +47,8 @@
 
         <div class="detailsform">
           <h4>Students Attendance</h4><br>
-          <form action="lecturer/attendance/mark" method="POST">
+          <form action="{{Auth::user()->id}}/mark" method="POST">
+            @csrf
             <div class="pd-parent">
 
             <div class="pd1">

@@ -53,11 +53,12 @@ Route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
     Route::post('sendLetter', [AdminController::class, 'acceptLetter']);
     //registration requests
     Route::get('registration_requests', [AdminController::class,'registration_requests']);
+    Route::post('sendrequest/{id}', [AdminController::class, 'sendRequest']);
     //lecturers
     Route::get('assign_lecturers', [AdminController::class,'assign_lecturers']);
     Route::get('lecturers', [AdminController::class, 'lecturers']);
     Route::post('addlecturer', [AdminController::class, 'addLecturers']);
-    Route::post('assign/lec_id={lec_id}/unit_id={unit_id}', [AdminController::class, 'assign']);
+    Route::post('assign/{lecid}', [AdminController::class, 'assign']);
 
     //rooms
     Route::get('rooms', [AdminController::class, 'rooms']);
@@ -89,7 +90,8 @@ Route::prefix('lecturer')->middleware('auth','isLecturer')->group(function(){
     Route::get('enrolled/{lecturerid}', [LecturerController::class,'enrolled']);
     Route::get('marks/{lecturerid}', [LecturerController::class,'marks']);
     Route::get('attendance/{lecturerid}', [LecturerController::class,'attendance']);
-    Route::post('attendance/mark', [LecturerController::class,'MarkAttendance']);
+    Route::post('attendance/{lecturerid}/mark', [LecturerController::class,'MarkAttendance']);
+    Route::post('marks/{lecturerid}/grade', [LecturerController::class, 'MarkStudent']);
 });
 
 

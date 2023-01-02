@@ -20,11 +20,12 @@
         <a href="accept">Acceptance Letter</a>
         <a href="enrol">Enrol Students</a>
         <a class="active" href="#">Lecturers</a>
+        <a href="registration_requests">Students</a>
         <a href="courses">Courses</a>
         <a href="units">Units</a>
         <a href="rooms">Rooms</a>
-        <a href="registration_requests">Send Registration Requests</a>
-        <a href="assign_lecturers">Assign Lecturers</a>
+
+        
         <a href="timetable">Timetable</a>
       </div>
     </nav>
@@ -52,7 +53,7 @@
                     <select name="role" hidden>
                       <option value="2" name="role" selected>Lecturer</option>
                     </select>
-                    <input type="text" name="password" style="border-bottom: 1px solid" value="password" readonly required><br><br>
+                    <input type="hidden" name="password" style="border-bottom: 1px solid" value="password" readonly required><br><br>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

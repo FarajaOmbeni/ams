@@ -9,5 +9,5 @@ class Unit extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['unit_name','unit_code','course_code'];
+    protected $fillable = ['unit_name','unit_code','course_code','lecturer_id'];
 }

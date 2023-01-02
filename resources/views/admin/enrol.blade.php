@@ -21,11 +21,12 @@
         <a href="accept">Acceptance Letter</a>
         <a class="active" href="#">Enrol Students</a>
         <a href="lecturers">Lecturers</a>
+        <a href="registration_requests">Students</a>
         <a href="courses">Courses</a>
         <a href="units">Units</a>
         <a href="rooms">Rooms</a>
-        <a href="registration_requests">Send Registration Requests</a>
-        <a href="assign_lecturers">Assign Lecturers</a>
+
+        
         <a href="timetable">Timetable</a>
       </div>
     </nav>

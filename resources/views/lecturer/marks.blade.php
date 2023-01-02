@@ -51,6 +51,8 @@
             
             <div class="pd-parent">
 
+          <form action="{{Auth::user()->id}}/grade" method="post">
+            @csrf
             <div class="pd1">
               <label for="description">Description:</label>
               <input type="text" name="description" Placeholder="description" style="margin-left:27px;"><br><br>
@@ -74,6 +76,7 @@
 
 
             </div>
+          </form>
 
             </div>
 

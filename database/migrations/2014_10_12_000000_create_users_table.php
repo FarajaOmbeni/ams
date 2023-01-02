@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('course_code')->references('course_code')->on('courses')->nullable();
             $table->string('units')->nullable();
+            $table->integer('academic_year')->default(0);
             $table->string('password');
             $table->integer('role')->default(0);
             $table->timestamp('email_verified_at')->nullable();
