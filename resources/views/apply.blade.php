@@ -54,13 +54,11 @@
 
                     <div class="row">
                         <div class="col">
-                            <select name="gender" class="form-control" id="gender_select" selected>
+                            <select name="gender" class="form-control" required>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
-                                <option value="" selected hidden>Gender</option>
+                                <option selected hidden>Gender</option>
                             </select>
-
-                            <input type="hidden" class="form-control" name="gender" id="gender_text">
 
                         </div>
                         <div class="col">
@@ -381,7 +379,6 @@
                                 <option value="{{$course->course_code}}">{{$course->course_name}}</option>
                                 
                                 @endforeach
-                                <option value="BICS">Computer Science</option>
                             </select>
                             
                         </div>
@@ -396,37 +393,37 @@
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="father_name" class="form-control" placeholder="Father Name" required>
+                            <input type="text" name="father_name" class="form-control" placeholder="Father Name">
                         </div>
                         <div class="col">
-                            <input type="text" name="father_email" class="form-control" placeholder="Father Email" required>
-                        </div>
-                      </div><br>
-
-                      <div class="row">
-                        <div class="col">
-                            <input type="text" name="father_tel" class="form-control" placeholder="Father Phone Number" required>
-                        </div>
-                        <div class="col">
-                            <input type="text" name="father_occupation" class="form-control" placeholder="Father Occupation" required>
+                            <input type="text" name="father_email" class="form-control" placeholder="Father Email" >
                         </div>
                       </div><br>
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="mother_name" class="form-control" placeholder="Mother Name" required>
+                            <input type="text" name="father_tel" class="form-control" placeholder="Father Phone Number" >
                         </div>
                         <div class="col">
-                            <input type="text" name="mother_email" class="form-control" placeholder="Mother Email" required>
+                            <input type="text" name="father_occupation" class="form-control" placeholder="Father Occupation" >
                         </div>
                       </div><br>
 
                       <div class="row">
                         <div class="col">
-                            <input type="text" name="mother_tel" class="form-control" placeholder="Mother Phone Number" required>
+                            <input type="text" name="mother_name" class="form-control" placeholder="Mother Name" >
                         </div>
                         <div class="col">
-                            <input type="text" name="mother_occupation" class="form-control" placeholder="Mother Occupation" required>
+                          <input type="text" name="mother_email" class="form-control" placeholder="Mother Email" >
+                        </div>
+                      </div><br>
+
+                      <div class="row">
+                        <div class="col">
+                            <input type="text" name="mother_tel" class="form-control" placeholder="Mother Phone Number" >
+                        </div>
+                        <div class="col">
+                            <input type="text" name="mother_occupation" class="form-control" placeholder="Mother Occupation" >
                         </div>
                       </div><br>
 
