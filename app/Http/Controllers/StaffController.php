@@ -32,38 +32,27 @@ class StaffController extends Controller
 
     }
 
-    public function financedept($id){
-        // $units = Unit::where('lecturer_id',$id)->get();
-        // return view('lecturer/enrolled',['units'=>$units]);
+    // public function financedept($id){
+    //     // $units = Unit::where('lecturer_id',$id)->get();
+    //     // return view('lecturer/enrolled',['units'=>$units]);
+
+    // }
+
+    public function cleanrota(){
+        $staff = Staff::where('dep_id', '3')->get();
+        return view('staff/cleanrota' ,['staff'=>$staff]);
 
     }
 
-    public function marks(){
-        $marks = Score::all();
-        return view('lecturer/marks',['marks'=>$marks]);
+    public function lostandfound(){
+        $lostitem = lostandfound::all();
+        return view('staff/lostandfound',['lostitem'=>$lostandfound]);
 
     }
 
-    public function attendance(){
-        $attendance = Attendance::all();
-        return view('lecturer/attendance',['attendance'=>$attendance]);
-
-    }
-
-    public function MarkAttendance(){
-        Validator::make(request()->all(),[
-            'student_id'=>'required',
-            'Attended'=>'required',
-            'unit_code'=>'required'
-        ])->validate();
-
-        $attend=new Attendance();
-        $attend->student_id=request('student_id');
-        $attend->Attended=request('Attended');
-        $attend->unit_code=request('unit_code');
-        $attend->save();
-
-        return redirect('lecturer/attendance');
+    public function departments(){
+        $departments = lostandfound::all();
+        return view('staff/lostandfound');
         
     }
 
